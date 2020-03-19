@@ -1,0 +1,2 @@
+- This is building off the tech-support-money-settings app that was built using HTML, CSS and Javascript
+- Want to create a new app, that is more scalable, using React/Redux for the front-end, and Rails --api as the backend
