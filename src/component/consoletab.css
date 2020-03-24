@@ -1,0 +1,11 @@
+.console-tab-div {
+  position: absolute;
+  top: 80px;
+  left: 80px;
+  width: 240px;
+  height: 1000px;
+
+  background: #f7f7f7 0% 0% no-repeat padding-box;
+
+  opacity: 1;
+}

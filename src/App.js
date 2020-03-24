@@ -1,33 +1,14 @@
 import React from "react";
-import logo from "./logo.svg";
 import { Component } from "react";
 import { connect } from "react-redux";
 import { showAllUsers } from "./actions/showAllUsers";
-import "./App.css";
+import HomePage from "./component/HomePage";
 
 class App extends Component {
-  // call our action creator
-
-  componentDidMount() {
-    this.props.showAllUsers();
-  }
   render() {
     return (
       <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
+        <HomePage />
       </div>
     );
   }
