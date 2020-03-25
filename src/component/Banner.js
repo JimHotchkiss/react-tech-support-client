@@ -4,7 +4,8 @@ import "./banner.css";
 const Banner = () => {
   return (
     <div className="banner-div">
-      <div className="icon-div"></div>
+      <div className="img-div"></div>
+      <div className="info-icon-div"></div>
     </div>
   );
 };

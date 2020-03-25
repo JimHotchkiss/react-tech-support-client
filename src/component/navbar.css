@@ -3,7 +3,7 @@
   top: 80px;
   left: 0px;
   width: 80px;
-  height: 1000px;
+  height: 620px;
 
   /* UI Properties */
 
@@ -25,9 +25,9 @@
 }
 
 .home-icon {
-  position: fixed;
-  top: 113px;
-  left: 28px;
+  position: relative;
+  top: 12px;
+  left: 14px;
   width: 24px;
   height: 24px;
 
@@ -37,9 +37,9 @@
 }
 
 .printer-icon {
-  position: fixed;
-  top: 173px;
-  left: 28px;
+  position: relative;
+  top: 60px;
+  left: 12px;
   width: 24px;
   height: 24px;
 

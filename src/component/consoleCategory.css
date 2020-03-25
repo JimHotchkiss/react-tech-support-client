@@ -1,6 +1,8 @@
 .console-category-div {
   text-align: left;
-  font: Black 21px/24px Roboto;
+  padding-left: 20px;
+  font-family: Roboto;
+  font-size: 21px;
   letter-spacing: 0;
   color: #414141;
   opacity: 1;

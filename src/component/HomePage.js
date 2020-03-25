@@ -2,6 +2,7 @@ import React from "react";
 import Banner from "./Banner";
 import NavBar from "./NavBar";
 import ConsoleTab from "./ConsoleTab";
+import SettingsWindow from "./SettingsWindow";
 
 const HomePage = () => {
   return (
@@ -9,6 +10,7 @@ const HomePage = () => {
       <Banner />
       <NavBar />
       <ConsoleTab />
+      <SettingsWindow />
     </div>
   );
 };
