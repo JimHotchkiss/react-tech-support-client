@@ -1,11 +1,15 @@
 import React from "react";
 import "./consoletab.css";
-import Ccu from "./Ccu";
+import ConsoleCategory from "./ConsoleCategory";
+import ConsoleRow from "./ConsoleRow";
 
 const ConsoleTab = () => {
   return (
     <div className="console-tab-div">
-      <Ccu />
+      <div className="console-wrapper">
+        <ConsoleCategory />
+        <ConsoleRow />
+      </div>
     </div>
   );
 };

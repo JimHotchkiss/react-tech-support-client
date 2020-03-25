@@ -9,3 +9,11 @@
 
   opacity: 1;
 }
+
+.console-wrapper {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  top: 10px;
+  left: 20px;
+}
