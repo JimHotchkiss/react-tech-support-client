@@ -1,9 +1,16 @@
 .console-category-div {
   text-align: left;
-  padding-left: 20px;
-  font-family: Roboto;
-  font-size: 21px;
+  padding: 20px 0px 10px 20px;
   letter-spacing: 0;
   color: #414141;
   opacity: 1;
+}
+
+.console-category-div h1 {
+  font-family: Roboto;
+  font-size: 21px;
+  font-weight: 900;
+  letter-spacing: 0;
+  padding: 0px;
+  margin: 0px;
 }
