@@ -13,7 +13,7 @@
   height: 24px;
   width: 24px;
 
-  background: transparent url("icon/expand-icon1.png") 0% 0% no-repeat
+  background: transparent url("icon/show-less-icon1.png") 0% 0% no-repeat
     padding-box;
 }
 
@@ -37,6 +37,23 @@
 
 .console-li-div a:hover {
   color: #414141;
+}
+
+.show-display {
+  padding: 12px;
+  opacity: 0;
+  max-height: 0;
+  overflow-y: hidden;
+  transition: all 0.4s ease-in-out;
+}
+
+.show-display.open {
+  margin-bottom: 1em;
+}
+
+.show-display.open {
+  max-height: 1000px;
+  opacity: 1;
 }
 
 @media only screen and (max-width: 360px) {

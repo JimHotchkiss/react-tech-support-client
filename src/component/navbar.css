@@ -3,7 +3,8 @@
   top: 80px;
   left: 0px;
   width: 80px;
-  height: 620px;
+  height: auto;
+  min-height: 620px;
 
   /* UI Properties */
 
