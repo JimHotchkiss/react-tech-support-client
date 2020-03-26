@@ -1,20 +1,25 @@
-import React from "react";
+import React, { useState } from "react";
 import "./consoleRow.css";
 
 const ConsoleRow = () => {
   const cameras = ["1688", "1588", "Precision", "1488", "1288", "1188"];
-  const cameraList = cameras.map(camera => {
+  const cameraList = cameras.map((camera, index) => {
     return (
-      <div key={camera} className="li-icon-div">
-        <div className="console-li-div">
-          <li className="console-li-element">
-            <a href="#">{camera}</a>
-          </li>
-        </div>
+      <div>
+        <div key={index} className="li-icon-div">
+          <div className="console-li-div">
+            <li className="console-li-element">
+              <a href="#">{camera}</a>
+            </li>
+          </div>
 
-        <a href="#">
-          <div className="expand-icon-div"></div>
-        </a>
+          <a href="#">
+            <div className="expand-icon-div"></div>
+          </a>
+        </div>
+        <div className="show-displays-div">
+          {/* This will need to be a Monitor component */}
+        </div>
       </div>
     );
   });

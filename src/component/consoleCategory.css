@@ -14,3 +14,16 @@
   padding: 0px;
   margin: 0px;
 }
+
+@media only screen and (max-width: 360px) {
+  .menu-icon-div {
+    position: absolute;
+    top: 23px;
+    left: 85%;
+    width: 24px;
+    height: 24px;
+
+    background: transparent url("icon/menu-icon1.png") 0% 0% no-repeat
+      padding-box;
+  }
+}

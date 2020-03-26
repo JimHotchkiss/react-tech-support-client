@@ -38,3 +38,27 @@
 .console-li-div a:hover {
   color: #414141;
 }
+
+@media only screen and (max-width: 360px) {
+  .console-li-div {
+    padding: 0px 0px 0px 20px;
+    width: 0%;
+  }
+  .li-icon-div {
+    margin: 0px 0px 0px 0px;
+    display: flex;
+    padding: 20px 0px 10px 0px;
+    width: 90%;
+    border-bottom: 1px solid #b2b4ae;
+  }
+
+  .expand-icon-div {
+    position: absolute;
+    left: 85%;
+    height: 24px;
+    width: 24px;
+
+    background: transparent url("icon/show-less-icon1.png") 0% 0% no-repeat
+      padding-box;
+  }
+}

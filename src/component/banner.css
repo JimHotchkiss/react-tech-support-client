@@ -36,10 +36,34 @@
 }
 
 @media only screen and (max-width: 360px) {
+  .banner-div {
+    margin-top: 0px;
+    left: 0px;
+    width: 375px;
+    height: 80px;
+
+    /* UI Properties */
+    background: #fff 0% 0% no-repeat padding-box;
+    box-shadow: 0px 1px 5px #0000001a;
+    opacity: 1;
+  }
+
+  .img-div {
+    position: absolute;
+    top: 25px;
+    left: 40px;
+    width: 120px;
+    height: 30px;
+
+    background: transparent url("img/logo-stryker.svg") 0% 0% no-repeat
+      padding-box;
+
+    opacity: 1;
+  }
   .info-icon-div {
     position: relative;
     top: 30px;
-    margin-left: 86%;
+    margin-left: 82%;
     width: 24px;
     height: 24px;
     background: transparent url("icon/icon-info.svg") 0% 0% no-repeat

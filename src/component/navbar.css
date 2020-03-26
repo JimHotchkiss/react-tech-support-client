@@ -49,6 +49,7 @@
 @media only screen and (max-width: 360px) {
   .navbar-div {
     /* Layout Properties*/
+
     top: 80px;
     left: 0px;
     width: 375px;
