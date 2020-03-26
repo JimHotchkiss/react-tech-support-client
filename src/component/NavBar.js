@@ -6,8 +6,8 @@ const NavBar = () => {
     <div className="navbar-div">
       <div className="round-div">
         <div className="home-icon"></div>
-        <div className="printer-icon"></div>
       </div>
+      <div className="printer-icon"></div>
     </div>
   );
 };

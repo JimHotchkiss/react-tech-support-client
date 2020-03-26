@@ -5,8 +5,8 @@ const ConsoleRow = () => {
   const cameras = ["1688", "1588", "Precision", "1488", "1288", "1188"];
   const cameraList = cameras.map(camera => {
     return (
-      <div className="li-icon-div">
-        <div key={camera} className="console-li-div">
+      <div key={camera} className="li-icon-div">
+        <div className="console-li-div">
           <li className="console-li-element">
             <a href="#">{camera}</a>
           </li>

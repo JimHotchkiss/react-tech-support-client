@@ -3,13 +3,16 @@ import Banner from "./Banner";
 import NavBar from "./NavBar";
 import ConsoleTab from "./ConsoleTab";
 import SettingsWindow from "./SettingsWindow";
+import "./home.css";
 
 const HomePage = () => {
   return (
     <div className="home-page-div">
       <Banner />
-      <NavBar />
-      <ConsoleTab />
+      <div className="navbar-console-div">
+        <NavBar />
+        <ConsoleTab />
+      </div>
       <SettingsWindow />
     </div>
   );
