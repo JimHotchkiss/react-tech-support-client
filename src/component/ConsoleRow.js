@@ -46,19 +46,21 @@ const ConsoleRow = () => {
 
   const cameraList = consoles.map((camera, index) => {
     return (
-      <div index={index} onClick={() => toggleDisplay(index)} key={index}>
-        <div className="li-icon-div">
-          <div className="console-li-div">
-            <li className="console-li-element">
-              <a index={index} href="#">
-                {camera.name}
-              </a>
-            </li>
-          </div>
+      <div key={index}>
+        <div index={index} onClick={() => toggleDisplay(index)}>
+          <div className="li-icon-div">
+            <div className="console-li-div">
+              <li className="console-li-element">
+                <a index={index} href="#">
+                  {camera.name}
+                </a>
+              </li>
+            </div>
 
-          <a href="#">
-            <div className="expand-icon-div"></div>
-          </a>
+            <a href="#">
+              <div className="expand-icon-div"></div>
+            </a>
+          </div>
         </div>
         <Displays camera={camera} />
       </div>

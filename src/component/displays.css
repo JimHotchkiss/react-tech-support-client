@@ -20,11 +20,23 @@
   border-radius: 8px;
   opacity: 1;
   padding: 10px 0px 0px 20px;
-  margin: 8px 0px 0px 0px;
+  margin: 10px 0px 0px 0px;
 }
 
 .monitor-div:hover {
   cursor: pointer;
   background: #2b72cc 0% 0% no-repeat padding-box;
   transition: all 0.4s ease-in-out;
+}
+
+.monitor-div-clicked {
+  position: relative;
+  left: 8px;
+  height: 40px;
+  width: 200px;
+  background: #2b72cc 0% 0% no-repeat padding-box;
+  border-radius: 8px;
+  opacity: 1;
+  padding: 10px 0px 0px 20px;
+  margin: 10px 0px 0px 0px;
 }
