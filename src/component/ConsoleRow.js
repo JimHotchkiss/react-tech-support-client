@@ -1,8 +1,9 @@
 import React, { useState } from "react";
 import "./consoleRow.css";
+import Displays from "./Displays";
 
 const ConsoleRow = () => {
-  const [ccus, setCcus] = useState([
+  const [consoles, setConsoles] = useState([
     {
       name: "1688",
       open: false
@@ -31,8 +32,8 @@ const ConsoleRow = () => {
 
   // Toggle function
   const toggleDisplay = index => {
-    setCcus(
-      ccus.map((camera, i) => {
+    setConsoles(
+      consoles.map((camera, i) => {
         if (i === index) {
           camera.open = !camera.open;
         } else {
@@ -42,18 +43,14 @@ const ConsoleRow = () => {
       })
     );
   };
-  const cameraList = ccus.map((camera, index) => {
+
+  const cameraList = consoles.map((camera, index) => {
     return (
-      <div key={index}>
-        <div
-          index={index}
-          key={index}
-          className="li-icon-div"
-          onClick={() => toggleDisplay(index)}
-        >
+      <div index={index} onClick={() => toggleDisplay(index)} key={index}>
+        <div className="li-icon-div">
           <div className="console-li-div">
             <li className="console-li-element">
-              <a index={index} onClick={() => toggleDisplay(index)} href="#">
+              <a index={index} href="#">
                 {camera.name}
               </a>
             </li>
@@ -63,22 +60,11 @@ const ConsoleRow = () => {
             <div className="expand-icon-div"></div>
           </a>
         </div>
-        <div className={"show-display " + (camera.open ? "open" : "")}>
-          <p>
-            lLucas ipsum dolor sit amet qui-gon padmé moff chewbacca darth
-            chewbacca bothan organa mandalorians jinn. Jade solo secura jade
-            darth gonk calamari darth sidious. Wedge obi-wan organa grievous
-            mandalorians vader. Ben leia coruscant fisto mandalorians kessel
-            mandalore darth windu. Mon skywalker grievous organa. Organa
-            dantooine owen mon secura han luke wampa ventress. Ventress organa
-            solo leia. Mandalore amidala binks hutt. Sith kit mon yavin antilles
-            obi-wan. Qui-gonn chewbacca jade ahsoka hutt luke jade anakin.
-          </p>
-          {/* This will need to be a Monitor component */}
-        </div>
+        <Displays camera={camera} />
       </div>
     );
   });
+
   return (
     <div className="console-row-div">
       <ul className="console-row-ul">{cameraList}</ul>
