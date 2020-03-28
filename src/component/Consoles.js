@@ -1,9 +1,9 @@
 import React, { useState } from "react";
-import "./consoleRow.css";
+import "./consoles.css";
 import Displays from "./Displays";
 import Arrow from "./Arrow";
 
-const ConsoleRow = () => {
+const Consoles = () => {
   const [cameras, setCameras] = useState([
     {
       name: "1688",
@@ -72,4 +72,4 @@ const ConsoleRow = () => {
   );
 };
 
-export default ConsoleRow;
+export default Consoles;
