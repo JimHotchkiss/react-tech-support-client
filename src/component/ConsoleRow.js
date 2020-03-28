@@ -1,9 +1,10 @@
 import React, { useState } from "react";
 import "./consoleRow.css";
 import Displays from "./Displays";
+import Arrow from "./Arrow";
 
 const ConsoleRow = () => {
-  const [consoles, setConsoles] = useState([
+  const [cameras, setCameras] = useState([
     {
       name: "1688",
       open: false
@@ -32,8 +33,8 @@ const ConsoleRow = () => {
 
   // Toggle function
   const toggleDisplay = index => {
-    setConsoles(
-      consoles.map((camera, i) => {
+    setCameras(
+      cameras.map((camera, i) => {
         if (i === index) {
           camera.open = !camera.open;
         } else {
@@ -44,7 +45,7 @@ const ConsoleRow = () => {
     );
   };
 
-  const cameraList = consoles.map((camera, index) => {
+  const cameraList = cameras.map((camera, index) => {
     return (
       <div key={index}>
         <div index={index} onClick={() => toggleDisplay(index)}>
@@ -56,10 +57,14 @@ const ConsoleRow = () => {
                 </a>
               </li>
             </div>
-
-            <a href="#">
-              <div className="expand-icon-div"></div>
-            </a>
+            {/* Expanding Arrow Component */}
+            <Arrow camera={camera} />
+            {/* <a href="#">
+              <div className={"arrow-outer-div " + (camera.open ? "open" : "")}>
+                <div className="arrow-div"></div>
+              </div>
+            </a> */}
+            {/* End Expanding Arrow Component  */}
           </div>
         </div>
         <Displays camera={camera} />
