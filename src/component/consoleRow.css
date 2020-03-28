@@ -1,8 +1,4 @@
-.console-row-div {
-}
-
 .li-icon-div {
-  margin: 0px 0px 0px 0px;
   display: flex;
   padding: 20px 0px 10px 0px;
   width: 95%;
@@ -12,7 +8,6 @@
 .expand-icon-div {
   height: 24px;
   width: 24px;
-
   background: transparent url("icon/show-less-icon1.png") 0% 0% no-repeat
     padding-box;
 }
@@ -44,7 +39,7 @@
   opacity: 0;
   max-height: 0;
   overflow-y: hidden;
-  transition: all 0.4s ease-in-out;
+  transition: all 0.2s ease-in-out;
 }
 
 .show-display.open {

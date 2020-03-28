@@ -21,7 +21,7 @@ const Displays = props => {
         <h3>Displays</h3>
       </div>
       <div
-        // onClick={() => toggleColor()}
+        onClick={() => toggleColor()}
         className={color.clicked ? "monitor-div" : "monitor-div-clicked"}
       >
         <p>VisionPro</p>
