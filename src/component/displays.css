@@ -1,9 +1,23 @@
-.display-title-div {
+.display-title {
   position: relative;
   left: 8px;
 }
 
-.display-title-div h3 {
+.show-display {
+  position: relative;
+  margin-top: 9px;
+  padding: 8px 0px 0px 8px;
+}
+
+/* .display-title-div h3 {
+  font-family: Roboto;
+  font-size: 21px;
+  letter-spacing: 0;
+  color: #414141;
+  opacity: 1;
+} */
+
+.display-title {
   font-family: Roboto;
   font-size: 21px;
   letter-spacing: 0;
@@ -11,32 +25,24 @@
   opacity: 1;
 }
 
-.monitor-div {
+.monitor-button {
   position: relative;
-  left: 8px;
   height: 40px;
   width: 200px;
   background: #eaeaea 0% 0% no-repeat padding-box;
   border-radius: 8px;
   opacity: 1;
   padding: 10px 0px 0px 20px;
-  margin: 10px 0px 0px 0px;
 }
 
-.monitor-div:hover {
+.monitor-button:hover {
   cursor: pointer;
   background: #2b72cc 0% 0% no-repeat padding-box;
   transition: all 0.4s ease-in-out;
 }
 
-.monitor-div-clicked {
+.display-button-div {
   position: relative;
-  left: 8px;
-  height: 40px;
-  width: 200px;
-  background: #2b72cc 0% 0% no-repeat padding-box;
-  border-radius: 8px;
-  opacity: 1;
-  padding: 10px 0px 0px 20px;
-  margin: 10px 0px 0px 0px;
+  padding: 0;
+  margin: 0;
 }

@@ -3,32 +3,41 @@ import "./displays.css";
 
 const Displays = props => {
   const [color, setColor] = useState({ clicked: true });
-  // console.log(props.camera.open);
+  const [monitors, setsMonitor] = useState([
+    {
+      name: "4k",
+      open: false
+    },
+    {
+      name: "VisionPro",
+      open: false
+    },
+    {
+      name: "HDTV Wise",
+      open: false
+    }
+  ]);
 
   const toggleColor = () => {
     console.log("I don't get it");
-    // console.log(color.clicked, props.camera.open);
-    // if (color.clicked === undefined) {
-    //   console.log("inside undefined");
-    //   setColor({ clicked: false });
-    // } else if (color.clicked && props.camera.open) {
-    //   setColor(!color.clicked);
-    // }
   };
+
+  const displayList = monitors.map((monitor, index) => {
+    return (
+      <div className={"show-display " + (props.camera.open ? "open" : "")}>
+        <div onClick={() => toggleColor()} className="monitor-button">
+          <p>{monitor.name}</p>
+        </div>
+      </div>
+    );
+  });
   return (
-    <div className={"show-display " + (props.camera.open ? "open" : "")}>
-      <div className="display-title-div">
-        <h3>Displays</h3>
-      </div>
-      <div
-        onClick={() => toggleColor()}
-        className={color.clicked ? "monitor-div" : "monitor-div-clicked"}
-      >
-        <p>VisionPro</p>
-      </div>
-      <div className="monitor-div">
-        <p>4k</p>
-      </div>
+    <div
+      className="display-div"
+      className={"show-display " + (props.camera.open ? "open" : "")}
+    >
+      <h3 className="display-title">Displays</h3>
+      <div className="display-button-div">{displayList}</div>
     </div>
   );
 };
