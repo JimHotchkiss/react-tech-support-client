@@ -57,14 +57,7 @@ const ConsoleRow = () => {
                 </a>
               </li>
             </div>
-            {/* Expanding Arrow Component */}
             <Arrow camera={camera} />
-            {/* <a href="#">
-              <div className={"arrow-outer-div " + (camera.open ? "open" : "")}>
-                <div className="arrow-div"></div>
-              </div>
-            </a> */}
-            {/* End Expanding Arrow Component  */}
           </div>
         </div>
         <Displays camera={camera} />

@@ -49,7 +49,7 @@
   opacity: 0;
   max-height: 0;
   overflow-y: hidden;
-  transition: all 0.2s ease-in-out;
+  transition: all 0.3s ease-in-out;
 }
 
 .show-display.open {
@@ -85,20 +85,10 @@
     background: transparent url("icon/show-less-icon1.png") 0% 0% no-repeat
       padding-box;
 
-    transition: all 0.4s ease-out;
+    transition: all 0.3s ease-out;
   }
 
   .arrow-outer-div.open .arrow-div::after {
-    transform: translateY(-50%) rotate(180deg);
+    transform: translateY(-50%) rotate(-180deg);
   }
-
-  /* .expand-icon-div {
-    position: absolute;
-    left: 85%;
-    height: 24px;
-    width: 24px;
-
-    background: transparent url("icon/show-less-icon1.png") 0% 0% no-repeat
-      padding-box;
-  } */
 }
