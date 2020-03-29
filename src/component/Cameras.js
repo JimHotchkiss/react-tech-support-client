@@ -1,9 +1,9 @@
 import React, { useState } from "react";
-import "./consoleRow.css";
 import Displays from "./Displays";
 import Arrow from "./Arrow";
 
-const ConsoleRow = () => {
+const Cameras = props => {
+  console.log(props.consoles);
   const [cameras, setCameras] = useState([
     {
       name: "1688",
@@ -32,7 +32,7 @@ const ConsoleRow = () => {
   ]);
 
   // Toggle function
-  const toggleDisplay = index => {
+  const toggleOpenDispaly = index => {
     setCameras(
       cameras.map((camera, i) => {
         if (i === index) {
@@ -47,10 +47,11 @@ const ConsoleRow = () => {
 
   const cameraList = cameras.map((camera, index) => {
     return (
-      <div key={index}>
-        <div index={index} onClick={() => toggleDisplay(index)}>
+      <div className="camera-outside-div" key={index}>
+        <div index={index} onClick={() => toggleOpenDispaly(index)}>
           <div className="li-icon-div">
             <div className="console-li-div">
+              {console.log(index)}
               <li className="console-li-element">
                 <a index={index} href="#">
                   {camera.name}
@@ -64,7 +65,6 @@ const ConsoleRow = () => {
       </div>
     );
   });
-
   return (
     <div className="console-row-div">
       <ul className="console-row-ul">{cameraList}</ul>
@@ -72,4 +72,4 @@ const ConsoleRow = () => {
   );
 };
 
-export default ConsoleRow;
+export default Cameras;

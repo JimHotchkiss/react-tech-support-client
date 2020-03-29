@@ -1,8 +1,12 @@
 .li-icon-div {
   display: flex;
-  padding: 20px 0px 10px 0px;
+  padding: 20px 0px 15px 0px;
   width: 95%;
   border-bottom: 1px solid #b2b4ae;
+}
+
+.arrow-div {
+  padding: 0px 0px 0px 26px;
 }
 
 .arrow-outer-div .arrow-div::after {
@@ -45,18 +49,17 @@
 }
 
 .show-display {
-  padding: 12px;
+  width: 100%;
+  padding: 0px;
   opacity: 0;
   max-height: 0;
   overflow-y: hidden;
-  transition: all 0.3s ease-in-out;
+  transition: all 0.4s ease-in;
 }
-
 .show-display.open {
-  margin-bottom: 1em;
-}
-
-.show-display.open {
+  padding: 0px;
+  margin: 0px 0px 0px 2px;
+  width: 95%;
   max-height: 1000px;
   opacity: 1;
 }
@@ -67,9 +70,8 @@
     width: 0%;
   }
   .li-icon-div {
-    margin: 0px 0px 0px 0px;
     display: flex;
-    padding: 20px 0px 10px 0px;
+    padding: 20px 0px 15px 0px;
     width: 90%;
     border-bottom: 1px solid #b2b4ae;
   }

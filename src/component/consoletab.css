@@ -3,6 +3,7 @@
   top: 83px;
   left: 80px;
   width: 240px;
+  min-height: 620px;
   height: auto;
 
   background: #f7f7f7 0% 0% no-repeat padding-box;
