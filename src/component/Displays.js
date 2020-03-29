@@ -24,7 +24,10 @@ const Displays = props => {
 
   const displayList = monitors.map((monitor, index) => {
     return (
-      <div className={"show-display " + (props.camera.open ? "open" : "")}>
+      <div
+        key={monitor.name}
+        className={"show-display " + (props.camera.open ? "open" : "")}
+      >
         <div onClick={() => toggleColor()} className="monitor-button">
           <p>{monitor.name}</p>
         </div>

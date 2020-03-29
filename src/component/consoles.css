@@ -45,18 +45,16 @@
 }
 
 .show-display {
+  width: 100%;
   padding: 12px;
   opacity: 0;
   max-height: 0;
   overflow-y: hidden;
-  transition: all 0.4s ease-in;
+  transition: all 0.2s ease-in;
 }
-
 .show-display.open {
-  margin-bottom: 1em;
-}
-
-.show-display.open {
+  padding: 0px;
+  width: 100%;
   max-height: 1000px;
   opacity: 1;
 }
