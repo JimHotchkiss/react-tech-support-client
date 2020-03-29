@@ -1,5 +1,5 @@
 .display-title {
-  padding: 15px 0px 10px 20px;
+  padding: 15px 0px 10px 15px;
 }
 
 .display-title {
@@ -12,23 +12,23 @@
 
 .monitor-button {
   position: relative;
+  left: 0px;
+  align-items: center;
   height: 40px;
-  width: 90%;
+  width: 95%;
+  padding-top: 20px;
+  margin: 10px 0px 10px 10px;
   background: #eaeaea 0% 0% no-repeat padding-box;
   border-radius: 8px;
   opacity: 1;
-  padding: 10px 0px 0px 20px;
-  margin: 5px 0px 20px 5px;
+}
+
+.monitor-button p {
+  margin-left: 25px;
 }
 
 .monitor-button:hover {
   cursor: pointer;
   background: #2b72cc 0% 0% no-repeat padding-box;
   transition: all 0.4s ease-in-out;
-}
-
-.display-button-div {
-  width: 100%;
-  padding: 10px;
-  margin: 5px 0px 0px 0px;
 }
