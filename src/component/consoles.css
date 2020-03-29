@@ -5,6 +5,10 @@
   border-bottom: 1px solid #b2b4ae;
 }
 
+.arrow-div {
+  padding: 0px 0px 0px 26px;
+}
+
 .arrow-outer-div .arrow-div::after {
   content: "";
   margin: 8px 0px 0px 0px;

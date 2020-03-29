@@ -15,8 +15,8 @@
   left: 0px;
   align-items: center;
   height: 40px;
-  width: 95%;
-  padding-top: 20px;
+  width: 93%;
+  padding-top: 10px;
   margin: 10px 0px 10px 10px;
   background: #eaeaea 0% 0% no-repeat padding-box;
   border-radius: 8px;
@@ -24,11 +24,17 @@
 }
 
 .monitor-button p {
+  color: #707070;
   margin-left: 25px;
 }
 
 .monitor-button:hover {
   cursor: pointer;
   background: #2b72cc 0% 0% no-repeat padding-box;
+  transition: all 0.4s ease-in-out;
+}
+
+.monitor-button p:hover {
+  color: #ffffff;
   transition: all 0.4s ease-in-out;
 }
