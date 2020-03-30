@@ -49,8 +49,9 @@
 }
 
 .show-display {
-  width: 100%;
+  width: 95%;
   padding: 0px;
+  margin: 0px 0px 0px 2px;
   opacity: 0;
   max-height: 0;
   overflow-y: hidden;

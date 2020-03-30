@@ -3,7 +3,6 @@ import Displays from "./Displays";
 import Arrow from "./Arrow";
 
 const Cameras = props => {
-  console.log(props.consoles);
   const [cameras, setCameras] = useState([
     {
       name: "1688",
@@ -45,13 +44,22 @@ const Cameras = props => {
     );
   };
 
+  const consoleLog = index => {
+    console.log(index);
+  };
+
   const cameraList = cameras.map((camera, index) => {
     return (
       <div className="camera-outside-div" key={index}>
-        <div index={index} onClick={() => toggleOpenDispaly(index)}>
+        <div
+          index={index}
+          onClick={() => {
+            toggleOpenDispaly(index);
+            consoleLog(index);
+          }}
+        >
           <div className="li-icon-div">
             <div className="console-li-div">
-              {console.log(index)}
               <li className="console-li-element">
                 <a index={index} href="#">
                   {camera.name}
