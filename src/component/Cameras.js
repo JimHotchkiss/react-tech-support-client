@@ -3,59 +3,16 @@ import Displays from "./Displays";
 import Arrow from "./Arrow";
 
 const Cameras = props => {
-  const [cameras, setCameras] = useState([
-    {
-      name: "1688",
-      open: false
-    },
-    {
-      name: "1588",
-      open: false
-    },
-    {
-      name: "Precision",
-      open: false
-    },
-    {
-      name: "1488",
-      open: false
-    },
-    {
-      name: "1288",
-      open: false
-    },
-    {
-      name: "1188",
-      open: false
-    }
-  ]);
+  console.log(props);
 
-  // Toggle function
-  const toggleOpenDispaly = index => {
-    setCameras(
-      cameras.map((camera, i) => {
-        if (i === index) {
-          camera.open = !camera.open;
-        } else {
-          camera.open = false;
-        }
-        return camera;
-      })
-    );
-  };
-
-  const consoleLog = index => {
-    console.log(index);
-  };
-
-  const cameraList = cameras.map((camera, index) => {
+  const cameraList = props.cameras.map((camera, index) => {
     return (
       <div className="camera-outside-div" key={index}>
         <div
           index={index}
           onClick={() => {
-            toggleOpenDispaly(index);
-            consoleLog(index);
+            props.toggleOpenDispaly(index);
+            props.consoleLog(index);
           }}
         >
           <div className="li-icon-div">

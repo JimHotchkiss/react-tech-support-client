@@ -2,11 +2,17 @@ import React, { useState } from "react";
 import "./consoles.css";
 import Cameras from "./Cameras";
 
-const Consoles = () => {
+const Consoles = props => {
+  console.log(props.cameras);
   const [consoles, setConsoles] = useState([]);
   return (
     <div>
-      <Cameras consoles={consoles} />
+      <Cameras
+        consoleLog={props.consoleLog}
+        toggleOpenDispaly={props.toggleOpenDispaly}
+        cameras={props.cameras}
+        consoles={consoles}
+      />
     </div>
   );
 };
