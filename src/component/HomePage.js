@@ -51,13 +51,14 @@ const HomePage = () => {
   };
 
   const updateConsoles = index => {
-    setConsoles([...consoles, cameras[index]]);
-    // updateInstructions(index);
+    console.log(cameras[index].open);
+    if (!cameras[index].open) {
+      setConsoles([...consoles, cameras[index]]);
+    } else {
+      setConsoles([]);
+    }
   };
 
-  const updateInstructions = index => {
-    // console.log(consoles);
-  };
   return (
     <div className="home-page-div">
       <Banner />
@@ -66,7 +67,6 @@ const HomePage = () => {
         <ConsoleTab
           consoles={consoles}
           updateConsoles={updateConsoles}
-          updateInstructions={updateInstructions}
           cameras={cameras}
           toggleOpenDispaly={toggleOpenDispaly}
         />

@@ -13,7 +13,6 @@ const Cameras = props => {
           onClick={() => {
             props.updateConsoles(index);
             props.toggleOpenDispaly(index);
-            props.updateInstructions(index);
           }}
         >
           <div className="li-icon-div">
