@@ -4,7 +4,7 @@ import ConsoleCategory from "./ConsoleCategory";
 import Consoles from "./Consoles";
 
 const ConsoleTab = props => {
-  console.log(props);
+  // console.log(props.consoles);
   return (
     <div className="console-tab-div">
       <div className="console-wrapper">

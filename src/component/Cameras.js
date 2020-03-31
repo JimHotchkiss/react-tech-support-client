@@ -1,18 +1,15 @@
-import React, { useState } from "react";
+import React from "react";
 import Displays from "./Displays";
 import Arrow from "./Arrow";
-
 const Cameras = props => {
-  console.log(props.consoles);
-
   const cameraList = props.cameras.map((camera, index) => {
     return (
       <div className="camera-outside-div" key={index}>
         <div
           index={index}
           onClick={() => {
-            props.updateConsoles(index);
             props.toggleOpenDispaly(index);
+            props.updateConsoles(index);
           }}
         >
           <div className="li-icon-div">

@@ -6,7 +6,8 @@ import SettingsWindow from "./SettingsWindow";
 import "./home.css";
 
 const HomePage = () => {
-  // Cameras
+  // Hooks
+  const [consoles, setConsoles] = useState([]);
   const [cameras, setCameras] = useState([
     {
       name: "1688",
@@ -33,8 +34,6 @@ const HomePage = () => {
       open: false
     }
   ]);
-  // Consoles
-  const [consoles, setConsoles] = useState([]);
 
   // Toggle function
   const toggleOpenDispaly = index => {
@@ -51,11 +50,13 @@ const HomePage = () => {
   };
 
   const updateConsoles = index => {
-    console.log(cameras[index].open);
-    if (!cameras[index].open) {
-      setConsoles([...consoles, cameras[index]]);
+    if (consoles.length === 0) {
+      const currentConsoles = [...consoles, cameras[index]];
+      setConsoles(currentConsoles);
     } else {
-      setConsoles([]);
+      const currentConsoles = [...consoles];
+      currentConsoles.splice(0, 1, cameras[index]);
+      setConsoles(currentConsoles);
     }
   };
 
@@ -65,7 +66,7 @@ const HomePage = () => {
       <div className="navbar-console-div">
         <NavBar />
         <ConsoleTab
-          consoles={consoles}
+          consoles={console.log(consoles)}
           updateConsoles={updateConsoles}
           cameras={cameras}
           toggleOpenDispaly={toggleOpenDispaly}
