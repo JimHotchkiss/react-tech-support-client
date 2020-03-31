@@ -6,6 +6,7 @@ const Consoles = props => {
   return (
     <div>
       <Cameras
+        updateConsoles={props.updateConsoles}
         updateInstructions={props.updateInstructions}
         toggleOpenDispaly={props.toggleOpenDispaly}
         cameras={props.cameras}

@@ -4,12 +4,13 @@ import ConsoleCategory from "./ConsoleCategory";
 import Consoles from "./Consoles";
 
 const ConsoleTab = props => {
-  console.log(props);
+  // console.log(props);
   return (
     <div className="console-tab-div">
       <div className="console-wrapper">
         <ConsoleCategory />
         <Consoles
+          updateConsoles={props.updateConsoles}
           consoles={props.consoles}
           updateInstructions={props.updateInstructions}
           toggleOpenDispaly={props.toggleOpenDispaly}

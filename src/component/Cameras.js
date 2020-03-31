@@ -3,7 +3,7 @@ import Displays from "./Displays";
 import Arrow from "./Arrow";
 
 const Cameras = props => {
-  console.log(props);
+  console.log(props.consoles);
 
   const cameraList = props.cameras.map((camera, index) => {
     return (
@@ -11,6 +11,7 @@ const Cameras = props => {
         <div
           index={index}
           onClick={() => {
+            props.updateConsoles(index);
             props.toggleOpenDispaly(index);
             props.updateInstructions(index);
           }}

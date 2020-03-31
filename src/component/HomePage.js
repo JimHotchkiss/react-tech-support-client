@@ -50,10 +50,13 @@ const HomePage = () => {
     );
   };
 
-  const updateInstructions = index => {
-    const currentConsolesState = consoles;
-
+  const updateConsoles = index => {
     setConsoles([...consoles, cameras[index]]);
+    // updateInstructions(index);
+  };
+
+  const updateInstructions = index => {
+    // console.log(consoles);
   };
   return (
     <div className="home-page-div">
@@ -62,12 +65,13 @@ const HomePage = () => {
         <NavBar />
         <ConsoleTab
           consoles={consoles}
+          updateConsoles={updateConsoles}
           updateInstructions={updateInstructions}
           cameras={cameras}
           toggleOpenDispaly={toggleOpenDispaly}
         />
       </div>
-      <SettingsWindow />
+      <SettingsWindow consoles={consoles} />
     </div>
   );
 };
