@@ -33,6 +33,8 @@ const HomePage = () => {
       open: false
     }
   ]);
+  // Consoles
+  const [consoles, setConsoles] = useState([]);
 
   // Toggle function
   const toggleOpenDispaly = index => {
@@ -48,8 +50,10 @@ const HomePage = () => {
     );
   };
 
-  const consoleLog = index => {
-    console.log(index);
+  const updateInstructions = index => {
+    const currentConsolesState = consoles;
+
+    setConsoles([...consoles, cameras[index]]);
   };
   return (
     <div className="home-page-div">
@@ -57,7 +61,8 @@ const HomePage = () => {
       <div className="navbar-console-div">
         <NavBar />
         <ConsoleTab
-          consoleLog={consoleLog}
+          consoles={consoles}
+          updateInstructions={updateInstructions}
           cameras={cameras}
           toggleOpenDispaly={toggleOpenDispaly}
         />

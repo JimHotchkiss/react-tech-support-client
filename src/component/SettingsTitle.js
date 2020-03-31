@@ -1,4 +1,5 @@
 import React from "react";
+import SettingsInstructions from "./SettingsInstructions";
 
 const SettingsTitle = () => {
   return (
@@ -7,14 +8,7 @@ const SettingsTitle = () => {
 
       <div className="info-div">
         <div className="settings-info-icon-div"></div>
-
-        {/* Information component*/}
-        <div className="info-text-div">
-          <p className="info-p-tag">
-            Select a CCU, monitor and specialty to display settings.
-          </p>
-        </div>
-        {/* End of Information component*/}
+        <SettingsInstructions />
       </div>
     </div>
   );

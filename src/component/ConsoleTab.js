@@ -10,7 +10,8 @@ const ConsoleTab = props => {
       <div className="console-wrapper">
         <ConsoleCategory />
         <Consoles
-          consoleLog={props.consoleLog}
+          consoles={props.consoles}
+          updateInstructions={props.updateInstructions}
           toggleOpenDispaly={props.toggleOpenDispaly}
           cameras={props.cameras}
         />
