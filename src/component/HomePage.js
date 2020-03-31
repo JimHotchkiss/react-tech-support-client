@@ -66,7 +66,7 @@ const HomePage = () => {
       <div className="navbar-console-div">
         <NavBar />
         <ConsoleTab
-          consoles={console.log(consoles)}
+          consoles={consoles}
           updateConsoles={updateConsoles}
           cameras={cameras}
           toggleOpenDispaly={toggleOpenDispaly}

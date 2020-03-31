@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import "./displays.css";
 
 const Displays = props => {
-  const [color, setColor] = useState({ clicked: true });
+  const [click, setClick] = useState(false);
   const [monitors, setsMonitor] = useState([
     {
       name: "4k",
@@ -18,8 +18,8 @@ const Displays = props => {
     }
   ]);
 
-  const toggleColor = () => {
-    console.log("I don't get it");
+  const selectDisplay = index => {
+    console.log(props.consoles, monitors[index].name);
   };
 
   const displayList = monitors.map((monitor, index) => {
@@ -28,7 +28,11 @@ const Displays = props => {
         key={monitor.name}
         className={"show-display " + (props.camera.open ? "open" : "")}
       >
-        <div onClick={() => toggleColor()} className="monitor-button">
+        <div
+          index={index}
+          onClick={() => selectDisplay(index)}
+          className="monitor-button"
+        >
           <p>{monitor.name}</p>
         </div>
       </div>
@@ -39,7 +43,7 @@ const Displays = props => {
       className="display-div"
       className={"show-display " + (props.camera.open ? "open" : "")}
     >
-      <h3 className="display-title">Displays</h3>
+      <h3 className="display-title">Display</h3>
       <div className="display-button-div">{displayList}</div>
     </div>
   );

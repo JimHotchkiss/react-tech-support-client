@@ -23,6 +23,9 @@
   opacity: 1;
 }
 
+.monitor-button.clicked {
+}
+
 .monitor-button p {
   color: #707070;
   margin-left: 25px;
