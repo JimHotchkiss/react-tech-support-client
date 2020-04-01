@@ -50,6 +50,17 @@ const HomePage = () => {
     }
   ]);
 
+  const [sixTeenMonitors, setSixTeenMonitors] = useState([
+    {
+      name: "4k",
+      clicked: false
+    },
+    {
+      name: "VisionPro",
+      clicked: false
+    }
+  ]);
+
   // Toggle function
   const toggleOpenDispaly = index => {
     setCameras(
@@ -96,7 +107,7 @@ const HomePage = () => {
       setConsoles(currentConsoles);
     }
   };
-  // Update Monitors
+  // Update Monitor
   const selectDisplay = index => {
     if (consoles[1]) {
       const currentConsoles = [...consoles];
