@@ -23,7 +23,12 @@ const Cameras = props => {
             <Arrow camera={camera} />
           </div>
         </div>
-        <Displays consoles={props.consoles} camera={camera} />
+        <Displays
+          consoles={props.consoles}
+          camera={camera}
+          monitors={props.monitors}
+          selectDisplay={props.selectDisplay}
+        />
       </div>
     );
   });

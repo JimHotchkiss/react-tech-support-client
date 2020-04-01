@@ -4,7 +4,7 @@ import ConsoleCategory from "./ConsoleCategory";
 import Consoles from "./Consoles";
 
 const ConsoleTab = props => {
-  // console.log("ConsoleTab:", props.consoles);
+  console.log("consoleTab:", props.consoles);
   return (
     <div className="console-tab-div">
       <div className="console-wrapper">
@@ -14,6 +14,8 @@ const ConsoleTab = props => {
           consoles={props.consoles}
           toggleOpenDispaly={props.toggleOpenDispaly}
           cameras={props.cameras}
+          monitors={props.monitors}
+          selectDisplay={props.selectDisplay}
         />
       </div>
     </div>

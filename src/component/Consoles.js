@@ -9,7 +9,9 @@ const Consoles = props => {
         updateConsoles={props.updateConsoles}
         toggleOpenDispaly={props.toggleOpenDispaly}
         cameras={props.cameras}
+        monitors={props.monitors}
         consoles={props.consoles}
+        selectDisplay={props.selectDisplay}
       />
     </div>
   );

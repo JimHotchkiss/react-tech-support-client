@@ -35,6 +35,21 @@ const HomePage = () => {
     }
   ]);
 
+  const [monitors, setsMonitor] = useState([
+    {
+      name: "4k",
+      open: false
+    },
+    {
+      name: "VisionPro",
+      open: false
+    },
+    {
+      name: "HDTV Wise",
+      open: false
+    }
+  ]);
+
   // Toggle function
   const toggleOpenDispaly = index => {
     setCameras(
@@ -53,9 +68,29 @@ const HomePage = () => {
     if (consoles.length === 0) {
       const currentConsoles = [...consoles, cameras[index]];
       setConsoles(currentConsoles);
+    } else if (consoles[1] && !cameras[index].open) {
+      console.log("inside:", cameras[index].open);
+      const currentConsoles = [];
+      setConsoles(currentConsoles);
+    } else if (consoles[1]) {
+      const currentConsoles = [...consoles];
+      currentConsoles.splice(0, 2, cameras[index]);
+      setConsoles(currentConsoles);
     } else {
+      console.log(cameras[index].open);
       const currentConsoles = [...consoles];
       currentConsoles.splice(0, 1, cameras[index]);
+      setConsoles(currentConsoles);
+    }
+  };
+  // Update Monitors
+  const selectDisplay = index => {
+    if (consoles[1]) {
+      const currentConsoles = [...consoles];
+      currentConsoles.splice(1, 1, monitors[index]);
+      setConsoles(currentConsoles);
+    } else {
+      const currentConsoles = [...consoles, monitors[index]];
       setConsoles(currentConsoles);
     }
   };
@@ -70,6 +105,8 @@ const HomePage = () => {
           updateConsoles={updateConsoles}
           cameras={cameras}
           toggleOpenDispaly={toggleOpenDispaly}
+          selectDisplay={selectDisplay}
+          monitors={monitors}
         />
       </div>
       <SettingsWindow consoles={consoles} />

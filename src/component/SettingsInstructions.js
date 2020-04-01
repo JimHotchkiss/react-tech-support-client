@@ -1,5 +1,6 @@
 import React from "react";
 const SettingsInstructions = props => {
+  console.log();
   const cameraInstructions = (
     <p className="info-p-tag">
       Select a CCU, monitor and specialty to display settings.
@@ -17,10 +18,10 @@ const SettingsInstructions = props => {
   return (
     <div className="instructions-div">
       <div className="info-text-div">
-        {props.consoles[0] && props.consoles[0].open
-          ? displayInstructions
-          : props.consoles[1] && props.consoles[0].open
+        {props.consoles[0] && props.consoles[0].open && props.consoles[1]
           ? specialtyInstructions
+          : props.consoles[0] && props.consoles[0].open
+          ? displayInstructions
           : cameraInstructions}
       </div>
     </div>

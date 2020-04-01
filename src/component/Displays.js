@@ -1,28 +1,8 @@
-import React, { useState } from "react";
+import React from "react";
 import "./displays.css";
 
 const Displays = props => {
-  const [click, setClick] = useState(false);
-  const [monitors, setsMonitor] = useState([
-    {
-      name: "4k",
-      open: false
-    },
-    {
-      name: "VisionPro",
-      open: false
-    },
-    {
-      name: "HDTV Wise",
-      open: false
-    }
-  ]);
-
-  const selectDisplay = index => {
-    console.log(props.consoles, monitors[index].name);
-  };
-
-  const displayList = monitors.map((monitor, index) => {
+  const displayList = props.monitors.map((monitor, index) => {
     return (
       <div
         key={monitor.name}
@@ -30,7 +10,7 @@ const Displays = props => {
       >
         <div
           index={index}
-          onClick={() => selectDisplay(index)}
+          onClick={() => props.selectDisplay(index)}
           className="monitor-button"
         >
           <p>{monitor.name}</p>
