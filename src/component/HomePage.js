@@ -79,6 +79,7 @@ const HomePage = () => {
   };
 
   const updateConsoles = index => {
+    console.log(index);
     if (consoles.length === 0) {
       const currentConsoles = [...consoles, cameras[index]];
       setConsoles(currentConsoles);

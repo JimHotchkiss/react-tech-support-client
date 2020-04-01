@@ -2,8 +2,9 @@ import React from "react";
 import "./displays.css";
 
 const Displays = props => {
-  console.log(props.camera);
+  console.log(props.consoles);
   const displayList = props.monitors.map((monitor, index) => {
+    console.log("monitor:", monitor, "camera:", props.consoles[0]);
     return (
       <div
         key={monitor.name}
