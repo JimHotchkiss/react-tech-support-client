@@ -24,6 +24,10 @@
 }
 
 .monitor-button.clicked {
+  background: #2b72cc 0% 0% no-repeat padding-box;
+}
+.monitor-button.clicked p {
+  color: #ffffff;
 }
 
 .monitor-button p {

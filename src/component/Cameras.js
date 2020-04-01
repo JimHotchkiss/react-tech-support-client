@@ -28,6 +28,7 @@ const Cameras = props => {
           camera={camera}
           monitors={props.monitors}
           selectDisplay={props.selectDisplay}
+          toggleDisplayButtonColor={props.toggleDisplayButtonColor}
         />
       </div>
     );

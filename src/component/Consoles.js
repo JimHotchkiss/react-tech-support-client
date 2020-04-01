@@ -8,6 +8,7 @@ const Consoles = props => {
       <Cameras
         updateConsoles={props.updateConsoles}
         toggleOpenDispaly={props.toggleOpenDispaly}
+        toggleDisplayButtonColor={props.toggleDisplayButtonColor}
         cameras={props.cameras}
         monitors={props.monitors}
         consoles={props.consoles}

@@ -2,6 +2,7 @@ import React from "react";
 import "./displays.css";
 
 const Displays = props => {
+  console.log(props.camera);
   const displayList = props.monitors.map((monitor, index) => {
     return (
       <div
@@ -10,8 +11,11 @@ const Displays = props => {
       >
         <div
           index={index}
-          onClick={() => props.selectDisplay(index)}
-          className="monitor-button"
+          onClick={() => {
+            props.selectDisplay(index);
+            props.toggleDisplayButtonColor(index);
+          }}
+          className={"monitor-button " + (monitor.clicked ? "clicked" : "")}
         >
           <p>{monitor.name}</p>
         </div>

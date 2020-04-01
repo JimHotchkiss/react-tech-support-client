@@ -38,15 +38,15 @@ const HomePage = () => {
   const [monitors, setsMonitor] = useState([
     {
       name: "4k",
-      open: false
+      clicked: false
     },
     {
       name: "VisionPro",
-      open: false
+      clicked: false
     },
     {
       name: "HDTV Wise",
-      open: false
+      clicked: false
     }
   ]);
 
@@ -64,12 +64,25 @@ const HomePage = () => {
     );
   };
 
+  const toggleDisplayButtonColor = index => {
+    console.log(cameras);
+    setsMonitor(
+      monitors.map((monitor, i) => {
+        if (i === index && consoles.length != 0) {
+          monitor.clicked = !monitor.clicked;
+        } else {
+          monitor.clicked = false;
+        }
+        return monitor;
+      })
+    );
+  };
+
   const updateConsoles = index => {
     if (consoles.length === 0) {
       const currentConsoles = [...consoles, cameras[index]];
       setConsoles(currentConsoles);
     } else if (consoles[1] && !cameras[index].open) {
-      console.log("inside:", cameras[index].open);
       const currentConsoles = [];
       setConsoles(currentConsoles);
     } else if (consoles[1]) {
@@ -77,7 +90,6 @@ const HomePage = () => {
       currentConsoles.splice(0, 2, cameras[index]);
       setConsoles(currentConsoles);
     } else {
-      console.log(cameras[index].open);
       const currentConsoles = [...consoles];
       currentConsoles.splice(0, 1, cameras[index]);
       setConsoles(currentConsoles);
@@ -105,6 +117,7 @@ const HomePage = () => {
           updateConsoles={updateConsoles}
           cameras={cameras}
           toggleOpenDispaly={toggleOpenDispaly}
+          toggleDisplayButtonColor={toggleDisplayButtonColor}
           selectDisplay={selectDisplay}
           monitors={monitors}
         />
