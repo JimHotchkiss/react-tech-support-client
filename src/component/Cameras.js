@@ -8,7 +8,7 @@ const Cameras = props => {
         <div
           index={index}
           onClick={() => {
-            props.toggleOpenDispaly(index);
+            props.toggleOpenDisplay(index);
             props.updateConsoles(index);
           }}
         >

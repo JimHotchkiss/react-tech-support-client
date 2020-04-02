@@ -62,7 +62,7 @@ const HomePage = () => {
   ]);
 
   // Toggle function
-  const toggleOpenDispaly = index => {
+  const toggleOpenDisplay = index => {
     setCameras(
       cameras.map((camera, i) => {
         if (i === index) {
@@ -76,7 +76,6 @@ const HomePage = () => {
   };
 
   const toggleDisplayButtonColor = index => {
-    console.log(cameras);
     setsMonitor(
       monitors.map((monitor, i) => {
         if (i === index && consoles.length != 0) {
@@ -90,7 +89,6 @@ const HomePage = () => {
   };
 
   const updateConsoles = index => {
-    console.log(index);
     if (consoles.length === 0) {
       const currentConsoles = [...consoles, cameras[index]];
       setConsoles(currentConsoles);
@@ -128,7 +126,7 @@ const HomePage = () => {
           consoles={consoles}
           updateConsoles={updateConsoles}
           cameras={cameras}
-          toggleOpenDispaly={toggleOpenDispaly}
+          toggleOpenDisplay={toggleOpenDisplay}
           toggleDisplayButtonColor={toggleDisplayButtonColor}
           selectDisplay={selectDisplay}
           monitors={monitors}

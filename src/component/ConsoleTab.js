@@ -11,7 +11,7 @@ const ConsoleTab = props => {
         <Consoles
           updateConsoles={props.updateConsoles}
           consoles={props.consoles}
-          toggleOpenDispaly={props.toggleOpenDispaly}
+          toggleOpenDisplay={props.toggleOpenDisplay}
           toggleDisplayButtonColor={props.toggleDisplayButtonColor}
           cameras={props.cameras}
           monitors={props.monitors}
