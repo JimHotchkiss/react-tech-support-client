@@ -4,13 +4,21 @@ import Specialties from "./Specialties";
 
 const SettingsTitle = props => {
   console.log(props);
+
+  const specialty = (
+    <div className="specialty-div">
+      <Specialties consoles={props.consoles} />
+    </div>
+  );
   return (
     <div className="settings-title-div">
       <h3>Money Settings</h3>
 
-      <div className="specialty-div">
+      {props.consoles[1] && props.consoles[1].clicked ? specialty : null}
+
+      {/* <div className="specialty-div">
         <Specialties consoles={props.consoles} />
-      </div>
+      </div> */}
 
       <div className="info-div">
         <div className="settings-info-icon-div"></div>

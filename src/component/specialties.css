@@ -20,7 +20,7 @@
 
 .specialty p:hover {
   color: #ffffff;
-  transition: all 0.4s ease-in-out;
+  transition: all 0.2s ease-in-out;
 }
 
 .specialty:hover {
@@ -36,7 +36,7 @@
 }
 
 .specialty-title-div p {
-  padding-top: 6px;
+  padding-top: 4px;
 }
 
 .specialty-title-div .specialty-title-tag {
