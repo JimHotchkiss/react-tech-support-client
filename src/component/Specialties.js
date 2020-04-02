@@ -58,7 +58,9 @@ const Specialties = props => {
   });
   return (
     <div className="specialty-component-div">
-      <p className="specialty-title-tag">Specialty</p>
+      <div className="specialty-title-div">
+        <p className="specialty-title-tag">Specialty:</p>
+      </div>
       <div className="specialty-list-div">{sixteenSpecialtiesList}</div>
     </div>
   );
