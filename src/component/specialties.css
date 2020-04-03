@@ -18,6 +18,14 @@
   border-radius: 50px;
 }
 
+.specialty.clicked {
+  background: #2b72cc 0% 0% no-repeat padding-box;
+}
+
+.specialty.clicked p {
+  color: #ffffff;
+}
+
 .specialty p:hover {
   color: #ffffff;
   transition: all 0.2s ease-in-out;

@@ -3,27 +3,48 @@ import SettingsInstructions from "./SettingsInstructions";
 import Specialties from "./Specialties";
 
 const SettingsTitle = props => {
-  console.log(props);
-
+  console.log(props.currentSpecialty);
   const specialty = (
     <div className="specialty-div">
-      <Specialties consoles={props.consoles} />
+      <Specialties
+        updateSpecialty={props.updateSpecialty}
+        selectSpecialty={props.selectSpecialty}
+        sixteenSpecialties={props.sixteenSpecialties}
+        consoles={props.consoles}
+        updateCurrentSpecialty={props.updateCurrentSpecialty}
+        currentSpecialty={props.currentSpecialty}
+      />
     </div>
   );
   return (
-    <div className="settings-title-div">
+    <div
+      className={
+        "settings-title-div " +
+        (props.currentSpecialty != null && props.currentSpecialty.clicked
+          ? "settings"
+          : "")
+      }
+    >
       <h3>Money Settings</h3>
-
-      {props.consoles[1] && props.consoles[1].clicked ? specialty : null}
-
-      {/* <div className="specialty-div">
-        <Specialties consoles={props.consoles} />
-      </div> */}
-
-      <div className="info-div">
-        <div className="settings-info-icon-div"></div>
+      <div
+        className={
+          "info-div " +
+          (props.currentSpecialty != null && props.currentSpecialty.clicked
+            ? "settings"
+            : "")
+        }
+      >
+        <div
+          className={
+            "settings-info-icon-div " +
+            (props.currentSpecialty != null && props.currentSpecialty.clicked
+              ? "settings"
+              : "")
+          }
+        ></div>
         <SettingsInstructions consoles={props.consoles} />
       </div>
+      {props.consoles[1] && props.consoles[1].clicked ? specialty : null}
     </div>
   );
 };

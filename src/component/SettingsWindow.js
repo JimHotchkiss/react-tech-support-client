@@ -6,7 +6,14 @@ import "./settingsTitle.css";
 const SettingsWindow = props => {
   return (
     <div className="settings-window-div">
-      <SettingsTitle consoles={props.consoles} />
+      <SettingsTitle
+        updateSpecialty={props.updateSpecialty}
+        selectSpecialty={props.selectSpecialty}
+        sixteenSpecialties={props.sixteenSpecialties}
+        consoles={props.consoles}
+        updateCurrentSpecialty={props.updateCurrentSpecialty}
+        currentSpecialty={props.currentSpecialty}
+      />
     </div>
   );
 };

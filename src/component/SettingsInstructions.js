@@ -21,13 +21,17 @@ const SettingsInstructions = props => {
   return (
     <div className="instructions-div">
       <div className="info-text-div">
-        {props.consoles[0] &&
-        props.consoles[0].open &&
-        props.consoles[1] &&
-        clicked
+        {props.consoles[2]
+          ? null
+          : props.consoles[0] &&
+            props.consoles[0].open &&
+            props.consoles[1] &&
+            clicked
           ? specialtyInstructions
           : props.consoles[0] && props.consoles[0].open
           ? displayInstructions
+          : props.consoles[2]
+          ? null
           : cameraInstructions}
       </div>
     </div>

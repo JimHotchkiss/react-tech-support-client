@@ -1,6 +1,7 @@
 .settings-title-div {
   position: absolute;
   top: 40px;
+  margin: 0;
   padding: 0;
 }
 
@@ -31,9 +32,4 @@
 .info-p-tag {
   padding-top: 3px;
   color: #b2b4ae;
-}
-
-.specialty-div {
-  position: relative;
-  margin: 43px 0px 10px 40px;
 }
