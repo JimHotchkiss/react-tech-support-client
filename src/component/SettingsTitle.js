@@ -50,7 +50,11 @@ const SettingsTitle = (props) => {
         ></div>
         <SettingsInstructions consoles={props.consoles} />
       </div>
-      {props.consoles[1] && props.consoles[1].clicked ? specialty : null}
+      {props.consoles[1] && props.consoles[1].clicked
+        ? specialty
+        : props.consoles[1] && !props.consoles[1].clicked && props.consoles[2]
+        ? specialty
+        : null}
     </div>
   );
 };

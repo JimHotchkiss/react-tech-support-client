@@ -3,7 +3,13 @@ import "./settingsWindow.css";
 import SettingsTitle from "./SettingsTitle";
 import "./settingsTitle.css";
 
-const SettingsWindow = props => {
+const SettingsWindow = (props) => {
+  console.log(
+    "consoles:",
+    props.consoles,
+    "current specialty:",
+    props.currentSpecialty
+  );
   return (
     <div className="settings-window-div">
       <SettingsTitle

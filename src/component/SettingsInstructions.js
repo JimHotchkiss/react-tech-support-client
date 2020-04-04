@@ -1,9 +1,12 @@
 import React from "react";
 const SettingsInstructions = (props) => {
   let clicked;
+
   if (props.consoles[1]) {
     clicked = props.consoles[1].clicked;
   }
+
+  console.log(!clicked);
   const cameraInstructions = (
     <p className="info-p-tag">
       Select a CCU, monitor and specialty to display settings.
@@ -21,17 +24,15 @@ const SettingsInstructions = (props) => {
   return (
     <div className="instructions-div">
       <div className="info-text-div">
-        {props.consoles[2]
+        {props.consoles[0] && props.consoles[1] && clicked && props.consoles[2]
           ? null
           : props.consoles[0] &&
             props.consoles[0].open &&
             props.consoles[1] &&
             clicked
           ? specialtyInstructions
-          : props.consoles[0] && props.consoles[0].open
+          : props.consoles[0] && props.consoles[0].open && !clicked
           ? displayInstructions
-          : props.consoles[2]
-          ? null
           : cameraInstructions}
       </div>
     </div>
