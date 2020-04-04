@@ -1,5 +1,5 @@
 import React from "react";
-const SettingsInstructions = props => {
+const SettingsInstructions = (props) => {
   let clicked;
   if (props.consoles[1]) {
     clicked = props.consoles[1].clicked;

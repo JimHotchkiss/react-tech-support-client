@@ -2,10 +2,16 @@ import React from "react";
 import SettingsInstructions from "./SettingsInstructions";
 import Specialties from "./Specialties";
 
-const SettingsTitle = props => {
-  console.log(props.currentSpecialty);
+const SettingsTitle = (props) => {
   const specialty = (
-    <div className="specialty-div">
+    <div
+      className={
+        "specialty-div " +
+        (props.currentSpecialty != null && props.currentSpecialty.clicked
+          ? "settings"
+          : "")
+      }
+    >
       <Specialties
         updateSpecialty={props.updateSpecialty}
         selectSpecialty={props.selectSpecialty}
