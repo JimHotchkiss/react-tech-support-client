@@ -5,8 +5,6 @@ const SettingsInstructions = (props) => {
   if (props.consoles[1]) {
     clicked = props.consoles[1].clicked;
   }
-
-  console.log(!clicked);
   const cameraInstructions = (
     <p className="info-p-tag">
       Select a CCU, monitor and specialty to display settings.
@@ -31,6 +29,11 @@ const SettingsInstructions = (props) => {
             props.consoles[1] &&
             clicked
           ? specialtyInstructions
+          : props.consoles[0] &&
+            props.consoles[0].open &&
+            props.consoles[2] &&
+            !clicked
+          ? displayInstructions
           : props.consoles[0] && props.consoles[0].open && !clicked
           ? displayInstructions
           : cameraInstructions}
