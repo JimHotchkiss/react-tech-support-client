@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "./specialties.css";
 
-const Specialties = props => {
+const Specialties = (props) => {
   const sixteenSpecialtiesList = props.sixteenSpecialties.map(
     (specialty, index) => {
       return (

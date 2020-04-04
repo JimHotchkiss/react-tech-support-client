@@ -4,6 +4,7 @@ import SettingsTitle from "./SettingsTitle";
 import "./settingsTitle.css";
 
 const SettingsWindow = (props) => {
+  console.log(props.consoles);
   return (
     <div className="settings-window-div">
       <SettingsTitle
