@@ -9,9 +9,7 @@ const Specialties = (props) => {
           <div
             className={"specialty " + (specialty.clicked ? "clicked" : "")}
             onClick={() => {
-              props.selectSpecialty(index);
-              props.updateSpecialty(index);
-              props.updateCurrentSpecialty(index);
+              props.toggleSpecialty(index);
             }}
           >
             <p className="specialty-text">{specialty.name}</p>

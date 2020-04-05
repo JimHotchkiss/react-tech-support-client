@@ -13,11 +13,10 @@ const SettingsTitle = (props) => {
       }
     >
       <Specialties
-        updateSpecialty={props.updateSpecialty}
+        toggleSpecialty={props.toggleSpecialty}
         selectSpecialty={props.selectSpecialty}
         sixteenSpecialties={props.sixteenSpecialties}
         consoles={props.consoles}
-        updateCurrentSpecialty={props.updateCurrentSpecialty}
         currentSpecialty={props.currentSpecialty}
       />
     </div>

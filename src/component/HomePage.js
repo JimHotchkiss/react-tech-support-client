@@ -112,8 +112,8 @@ const HomePage = () => {
 
   const [currentSpecialty, setCurrentSpecialty] = useState(null);
 
-  // Select Specialty
-  const selectSpecialty = (index) => {
+  // Toggle Specialty
+  const toggleSpecialty = (index) => {
     setSixteenSpecialties(
       sixteenSpecialties.map((specialty, i) => {
         if (i === index && consoles.length != 0) {
@@ -121,12 +121,13 @@ const HomePage = () => {
         } else {
           specialty.clicked = false;
         }
+        updateSelection(index);
         return specialty;
       })
     );
   };
 
-  // Toggle function
+  // Toggle camera
   const toggleCamera = (index) => {
     setCameras(
       cameras.map((camera, i) => {
@@ -158,83 +159,29 @@ const HomePage = () => {
   };
 
   const updateSelection = (index) => {
-    console.log("update selection:", monitors[index].clicked);
     if (consoles.length === 0) {
-      console.log("inside A:", monitors[index]);
       const currentConsoles = [...consoles, cameras[index]];
       setConsoles(currentConsoles);
-    } else if (consoles[0] && !cameras[index].open) {
-      console.log("inside B:", monitors[index]);
+    } else if (consoles[0] && consoles[1] && !cameras[index].open) {
+      const displayToggle = consoles[1];
+      displayToggle.clicked = false;
+      // console.log(displayToggle);
+      // setsMonitor(displayToggle);
       const currentConsoles = [];
       setConsoles(currentConsoles);
     } else if (consoles[0] && monitors[index].clicked) {
       const currentConsoles = [...consoles];
       currentConsoles.push(monitors[index]);
       setConsoles(currentConsoles);
-    } else if (consoles[1]) {
-      console.log("inside C:", monitors[index]);
+    } else if (consoles[1] && !monitors[index].clicked) {
       const currentConsoles = [...consoles];
-      currentConsoles.splice(0, 2, cameras[index]);
+      currentConsoles.splice(1, 2);
       setConsoles(currentConsoles);
     } else {
-      console.log("inside D:", monitors[index]);
       const currentConsoles = [...consoles];
       currentConsoles.splice(0, 1, cameras[index]);
       setConsoles(currentConsoles);
     }
-  };
-  // // Update Monitor
-  // const selectDisplay = (index) => {
-  //   if (
-  //     consoles[1] &&
-  //     consoles[1] != "-" &&
-  //     !consoles[1].clicked &&
-  //     consoles[2]
-  //   ) {
-  //     const currentConsoles = [...consoles];
-  //     currentConsoles.splice(1, 1, "-");
-  //     setConsoles(currentConsoles);
-  //   } else if (consoles[1] && consoles[1] === "-" && consoles[2]) {
-  //     console.log("inside A");
-  //     const currentConsoles = [...consoles];
-  //     currentConsoles.splice(1, 1, monitors[index]);
-  //     setConsoles(currentConsoles);
-  //   } else if (consoles[1] && consoles[1].clicked === false) {
-  //     console.log("inside B");
-  //     const currentConsoles = [...consoles];
-  //     currentConsoles.splice(1, 1);
-  //     setConsoles(currentConsoles);
-  //   } else {
-  //     const currentConsoles = [...consoles, monitors[index]];
-  //     setConsoles(currentConsoles);
-  //   }
-  // };
-
-  // Update Specialty
-  const updateSpecialty = (index) => {
-    if (consoles[2] && sixteenSpecialties[index].clicked === true) {
-      const currentConsoles = [...consoles];
-      currentConsoles.splice(2, 2, sixteenSpecialties[index]);
-      setConsoles(currentConsoles);
-    } else if (consoles[2] && sixteenSpecialties[index].clicked === false) {
-      const currentConsoles = [...consoles];
-      currentConsoles.splice(2, 1);
-      setConsoles(currentConsoles);
-    } else {
-      const currentConsoles = [...consoles, sixteenSpecialties[index]];
-      setConsoles(currentConsoles);
-    }
-  };
-
-  // Current Specialty
-  const updateCurrentSpecialty = (index) => {
-    sixteenSpecialties.map((specialty, i) => {
-      if (i === index) {
-        let usersSpecialty = currentSpecialty;
-        usersSpecialty = sixteenSpecialties[index];
-        setCurrentSpecialty(usersSpecialty);
-      }
-    });
   };
 
   return (
@@ -251,11 +198,10 @@ const HomePage = () => {
         />
       </div>
       <SettingsWindow
-        selectSpecialty={selectSpecialty}
+        toggleSpecialty={toggleSpecialty}
         sixteenSpecialties={sixteenSpecialties}
         consoles={consoles}
-        updateSpecialty={updateSpecialty}
-        updateCurrentSpecialty={updateCurrentSpecialty}
+        monitors={monitors}
         currentSpecialty={currentSpecialty}
       />
     </div>

@@ -4,15 +4,14 @@ import SettingsTitle from "./SettingsTitle";
 import "./settingsTitle.css";
 
 const SettingsWindow = (props) => {
-  console.log(props.consoles);
+  console.log(props.monitors);
   return (
     <div className="settings-window-div">
       <SettingsTitle
-        updateSpecialty={props.updateSpecialty}
+        toggleSpecialty={props.toggleSpecialty}
         selectSpecialty={props.selectSpecialty}
         sixteenSpecialties={props.sixteenSpecialties}
         consoles={props.consoles}
-        updateCurrentSpecialty={props.updateCurrentSpecialty}
         currentSpecialty={props.currentSpecialty}
       />
     </div>
