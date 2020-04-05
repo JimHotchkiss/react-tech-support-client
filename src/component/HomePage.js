@@ -165,8 +165,6 @@ const HomePage = () => {
     } else if (consoles[0] && consoles[1] && !cameras[index].open) {
       const displayToggle = consoles[1];
       displayToggle.clicked = false;
-      // console.log(displayToggle);
-      // setsMonitor(displayToggle);
       const currentConsoles = [];
       setConsoles(currentConsoles);
     } else if (consoles[0] && monitors[index].clicked) {
