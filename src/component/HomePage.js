@@ -162,10 +162,14 @@ const HomePage = () => {
     if (consoles.length === 0) {
       const currentConsoles = [...consoles, cameras[index]];
       setConsoles(currentConsoles);
-    } else if (consoles[0] && consoles[1] && !cameras[index].open) {
+    } else if (consoles[0] && consoles[1] && !consoles[0].open) {
       const displayToggle = consoles[1];
       displayToggle.clicked = false;
       const currentConsoles = [];
+      setConsoles(currentConsoles);
+    } else if (consoles[0] && consoles[1] && monitors[index].clicked) {
+      const currentConsoles = [...consoles];
+      currentConsoles.splice(1, 2, monitors[index]);
       setConsoles(currentConsoles);
     } else if (consoles[0] && monitors[index].clicked) {
       const currentConsoles = [...consoles];

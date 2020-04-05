@@ -4,7 +4,7 @@ import SettingsTitle from "./SettingsTitle";
 import "./settingsTitle.css";
 
 const SettingsWindow = (props) => {
-  console.log(props.monitors);
+  console.log("monitors:", props.monitors, "consoles:", props.consoles);
   return (
     <div className="settings-window-div">
       <SettingsTitle
