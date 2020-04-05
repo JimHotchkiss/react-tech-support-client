@@ -157,13 +157,13 @@ const HomePage = () => {
   };
 
   const updateSelection = (index) => {
-    console.log(sixteenSpecialties[index]);
+    console.log(consoles[2]);
     if (consoles[2] && consoles[2].clicked === false) {
       console.log("2:", consoles);
       const currentConsoles = [...consoles];
       currentConsoles.splice(2, 1);
       setConsoles(currentConsoles);
-    } else if (consoles[2] && consoles[2].clicked === false) {
+    } else if (consoles[2]) {
       console.log("3:", consoles);
       const currentConsoles = [...consoles];
       currentConsoles.splice(2, 1, sixteenSpecialties[index]);
