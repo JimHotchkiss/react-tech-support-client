@@ -12,7 +12,6 @@ const SettingsWindow = (props) => {
         selectSpecialty={props.selectSpecialty}
         sixteenSpecialties={props.sixteenSpecialties}
         consoles={props.consoles}
-        currentSpecialty={props.currentSpecialty}
       />
     </div>
   );

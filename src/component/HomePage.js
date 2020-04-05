@@ -157,9 +157,14 @@ const HomePage = () => {
   };
 
   const updateSelection = (index) => {
-    console.log("1:", consoles);
+    console.log(sixteenSpecialties[index]);
     if (consoles[2] && consoles[2].clicked === false) {
       console.log("2:", consoles);
+      const currentConsoles = [...consoles];
+      currentConsoles.splice(2, 1);
+      setConsoles(currentConsoles);
+    } else if (consoles[2] && consoles[2].clicked === false) {
+      console.log("3:", consoles);
       const currentConsoles = [...consoles];
       currentConsoles.splice(2, 1, sixteenSpecialties[index]);
       setConsoles(currentConsoles);
@@ -220,7 +225,6 @@ const HomePage = () => {
         sixteenSpecialties={sixteenSpecialties}
         consoles={consoles}
         monitors={monitors}
-        currentSpecialty={currentSpecialty}
       />
     </div>
   );

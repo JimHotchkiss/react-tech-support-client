@@ -17,7 +17,6 @@ const SettingsTitle = (props) => {
         selectSpecialty={props.selectSpecialty}
         sixteenSpecialties={props.sixteenSpecialties}
         consoles={props.consoles}
-        currentSpecialty={props.currentSpecialty}
       />
     </div>
   );
@@ -34,9 +33,7 @@ const SettingsTitle = (props) => {
       <div
         className={
           "info-div " +
-          (props.currentSpecialty != null && props.currentSpecialty.clicked
-            ? "settings"
-            : "")
+          (props.consoles[2] && props.consoles[2].clicked ? "settings" : "")
         }
       >
         <div
