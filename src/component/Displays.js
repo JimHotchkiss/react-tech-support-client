@@ -12,8 +12,7 @@ const Displays = (props) => {
           <div
             index={index}
             onClick={() => {
-              // props.selectDisplay(index);
-              props.toggleDisplayButtonColor(index);
+              props.toggleDisplay(index);
             }}
             className={"monitor-button " + (monitor.clicked ? "clicked" : "")}
           >
@@ -33,8 +32,7 @@ const Displays = (props) => {
         <div
           index={index}
           onClick={() => {
-            props.selectDisplay(index);
-            props.toggleDisplayButtonColor(index);
+            props.toggleDisplay(index);
           }}
           className={"monitor-button " + (monitor.clicked ? "clicked" : "")}
         >

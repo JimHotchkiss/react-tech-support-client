@@ -3,19 +3,17 @@ import "./consoletab.css";
 import ConsoleCategory from "./ConsoleCategory";
 import Consoles from "./Consoles";
 
-const ConsoleTab = props => {
+const ConsoleTab = (props) => {
   return (
     <div className="console-tab-div">
       <div className="console-wrapper">
         <ConsoleCategory />
         <Consoles
-          updateConsoles={props.updateConsoles}
           consoles={props.consoles}
-          toggleOpenDisplay={props.toggleOpenDisplay}
-          toggleDisplayButtonColor={props.toggleDisplayButtonColor}
+          toggleCamera={props.toggleCamera}
+          toggleDisplay={props.toggleDisplay}
           cameras={props.cameras}
           monitors={props.monitors}
-          selectDisplay={props.selectDisplay}
         />
       </div>
     </div>

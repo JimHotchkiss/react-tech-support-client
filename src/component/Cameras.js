@@ -1,15 +1,14 @@
 import React from "react";
 import Displays from "./Displays";
 import Arrow from "./Arrow";
-const Cameras = props => {
+const Cameras = (props) => {
   const cameraList = props.cameras.map((camera, index) => {
     return (
       <div className="camera-outside-div" key={index}>
         <div
           index={index}
           onClick={() => {
-            props.toggleOpenDisplay(index);
-            props.updateConsoles(index);
+            props.toggleCamera(index);
           }}
         >
           <div className="li-icon-div">
@@ -28,7 +27,7 @@ const Cameras = props => {
           camera={camera}
           monitors={props.monitors}
           selectDisplay={props.selectDisplay}
-          toggleDisplayButtonColor={props.toggleDisplayButtonColor}
+          toggleDisplay={props.toggleDisplay}
         />
       </div>
     );

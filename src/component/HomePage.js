@@ -127,7 +127,7 @@ const HomePage = () => {
   };
 
   // Toggle function
-  const toggleOpenDisplay = (index) => {
+  const toggleCamera = (index) => {
     setCameras(
       cameras.map((camera, i) => {
         if (i === index) {
@@ -135,12 +135,14 @@ const HomePage = () => {
         } else {
           camera.open = false;
         }
+        console.log("inside toggleCamera");
+        updateSelection(index);
         return camera;
       })
     );
   };
 
-  const toggleDisplayButtonColor = (index) => {
+  const toggleDisplay = (index) => {
     setsMonitor(
       monitors.map((monitor, i) => {
         if (i === index && consoles.length != 0) {
@@ -148,59 +150,68 @@ const HomePage = () => {
         } else {
           monitor.clicked = false;
         }
-        selectDisplay(index);
+        console.log("inside toggleDisplay");
+        updateSelection(index);
         return monitor;
       })
     );
   };
 
-  const updateConsoles = (index) => {
+  const updateSelection = (index) => {
+    console.log("update selection:", monitors[index].clicked);
     if (consoles.length === 0) {
+      console.log("inside A:", monitors[index]);
       const currentConsoles = [...consoles, cameras[index]];
       setConsoles(currentConsoles);
-    } else if (consoles[1] && !cameras[index].open) {
+    } else if (consoles[0] && !cameras[index].open) {
+      console.log("inside B:", monitors[index]);
       const currentConsoles = [];
       setConsoles(currentConsoles);
+    } else if (consoles[0] && monitors[index].clicked) {
+      const currentConsoles = [...consoles];
+      currentConsoles.push(monitors[index]);
+      setConsoles(currentConsoles);
     } else if (consoles[1]) {
+      console.log("inside C:", monitors[index]);
       const currentConsoles = [...consoles];
       currentConsoles.splice(0, 2, cameras[index]);
       setConsoles(currentConsoles);
     } else {
+      console.log("inside D:", monitors[index]);
       const currentConsoles = [...consoles];
       currentConsoles.splice(0, 1, cameras[index]);
       setConsoles(currentConsoles);
     }
   };
-  // Update Monitor
-  const selectDisplay = (index) => {
-    if (
-      consoles[1] &&
-      consoles[1] != "-" &&
-      !consoles[1].clicked &&
-      consoles[2]
-    ) {
-      const currentConsoles = [...consoles];
-      currentConsoles.splice(1, 1, "-");
-      setConsoles(currentConsoles);
-    } else if (consoles[1] && consoles[1] === "-" && consoles[2]) {
-      console.log("inside A");
-      const currentConsoles = [...consoles];
-      currentConsoles.splice(1, 1, monitors[index]);
-      setConsoles(currentConsoles);
-    } else if (consoles[1] && consoles[1].clicked === false) {
-      console.log("inside B");
-      const currentConsoles = [...consoles];
-      currentConsoles.splice(1, 1);
-      setConsoles(currentConsoles);
-    } else {
-      const currentConsoles = [...consoles, monitors[index]];
-      setConsoles(currentConsoles);
-    }
-  };
+  // // Update Monitor
+  // const selectDisplay = (index) => {
+  //   if (
+  //     consoles[1] &&
+  //     consoles[1] != "-" &&
+  //     !consoles[1].clicked &&
+  //     consoles[2]
+  //   ) {
+  //     const currentConsoles = [...consoles];
+  //     currentConsoles.splice(1, 1, "-");
+  //     setConsoles(currentConsoles);
+  //   } else if (consoles[1] && consoles[1] === "-" && consoles[2]) {
+  //     console.log("inside A");
+  //     const currentConsoles = [...consoles];
+  //     currentConsoles.splice(1, 1, monitors[index]);
+  //     setConsoles(currentConsoles);
+  //   } else if (consoles[1] && consoles[1].clicked === false) {
+  //     console.log("inside B");
+  //     const currentConsoles = [...consoles];
+  //     currentConsoles.splice(1, 1);
+  //     setConsoles(currentConsoles);
+  //   } else {
+  //     const currentConsoles = [...consoles, monitors[index]];
+  //     setConsoles(currentConsoles);
+  //   }
+  // };
 
   // Update Specialty
   const updateSpecialty = (index) => {
-    console.log("inside updatespecialty", sixteenSpecialties[index].clicked);
     if (consoles[2] && sixteenSpecialties[index].clicked === true) {
       const currentConsoles = [...consoles];
       currentConsoles.splice(2, 2, sixteenSpecialties[index]);
@@ -233,11 +244,9 @@ const HomePage = () => {
         <NavBar />
         <ConsoleTab
           consoles={consoles}
-          updateConsoles={updateConsoles}
           cameras={cameras}
-          toggleOpenDisplay={toggleOpenDisplay}
-          toggleDisplayButtonColor={toggleDisplayButtonColor}
-          selectDisplay={selectDisplay}
+          toggleCamera={toggleCamera}
+          toggleDisplay={toggleDisplay}
           monitors={monitors}
         />
       </div>
