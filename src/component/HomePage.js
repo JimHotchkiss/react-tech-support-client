@@ -159,7 +159,12 @@ const HomePage = () => {
   };
 
   const updateSelection = (index) => {
-    if (consoles.length === 0) {
+    console.log("update specialty:", sixteenSpecialties[index].clicked);
+    if (consoles[1] && sixteenSpecialties[index].clicked) {
+      const currentConsoles = [...consoles];
+      currentConsoles.push(sixteenSpecialties[index]);
+      // setSixteenSpecialties(currentConsoles);
+    } else if (consoles.length === 0) {
       const currentConsoles = [...consoles, cameras[index]];
       setConsoles(currentConsoles);
     } else if (consoles[0] && consoles[1] && !consoles[0].open) {
