@@ -136,7 +136,6 @@ const HomePage = () => {
         } else {
           camera.open = false;
         }
-        console.log("inside toggleCamera");
         updateSelection(index);
         return camera;
       })
@@ -151,7 +150,6 @@ const HomePage = () => {
         } else {
           monitor.clicked = false;
         }
-        console.log("inside toggleDisplay");
         updateSelection(index);
         return monitor;
       })
@@ -159,11 +157,18 @@ const HomePage = () => {
   };
 
   const updateSelection = (index) => {
-    console.log("update specialty:", sixteenSpecialties[index].clicked);
     if (consoles[1] && sixteenSpecialties[index].clicked) {
       const currentConsoles = [...consoles];
       currentConsoles.push(sixteenSpecialties[index]);
-      // setSixteenSpecialties(currentConsoles);
+      setConsoles(currentConsoles);
+    } else if (consoles[2] && consoles[2].clicked === false) {
+      console.log("inside");
+      const currentConsoles = [...consoles];
+      currentConsoles.splice(1, 1, sixteenSpecialties[index]);
+      setConsoles(currentConsoles);
+    } else if (consoles.length === 0 && cameras[index].clicked) {
+      const currentConsoles = [...consoles, cameras[index]];
+      setConsoles(currentConsoles);
     } else if (consoles.length === 0) {
       const currentConsoles = [...consoles, cameras[index]];
       setConsoles(currentConsoles);
@@ -172,15 +177,20 @@ const HomePage = () => {
       displayToggle.clicked = false;
       const currentConsoles = [];
       setConsoles(currentConsoles);
-    } else if (consoles[0] && consoles[1] && monitors[index].clicked) {
+    } else if (
+      consoles[0] &&
+      consoles[1] &&
+      monitors[index] &&
+      monitors[index].clicked
+    ) {
       const currentConsoles = [...consoles];
-      currentConsoles.splice(1, 2, monitors[index]);
+      currentConsoles.splice(1, 1, monitors[index]);
       setConsoles(currentConsoles);
-    } else if (consoles[0] && monitors[index].clicked) {
+    } else if (consoles[0] && monitors[index] && monitors[index].clicked) {
       const currentConsoles = [...consoles];
       currentConsoles.push(monitors[index]);
       setConsoles(currentConsoles);
-    } else if (consoles[1] && !monitors[index].clicked) {
+    } else if (consoles[1] && monitors[index] && !monitors[index].clicked) {
       const currentConsoles = [...consoles];
       currentConsoles.splice(1, 2);
       setConsoles(currentConsoles);
