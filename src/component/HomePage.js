@@ -11,109 +11,109 @@ const HomePage = () => {
   const [cameras, setCameras] = useState([
     {
       name: "1688",
-      open: false
+      open: false,
     },
     {
       name: "1588",
-      open: false
+      open: false,
     },
     {
       name: "Precision",
-      open: false
+      open: false,
     },
     {
       name: "1488",
-      open: false
+      open: false,
     },
     {
       name: "1288",
-      open: false
+      open: false,
     },
     {
       name: "1188",
-      open: false
-    }
+      open: false,
+    },
   ]);
 
   const [monitors, setsMonitor] = useState([
     {
       name: "4k",
-      clicked: false
+      clicked: false,
     },
     {
       name: "VisionPro",
-      clicked: false
+      clicked: false,
     },
     {
       name: "HDTV Wise",
-      clicked: false
-    }
+      clicked: false,
+    },
   ]);
 
   // Specialty Hook
   const [sixteenSpecialties, setSixteenSpecialties] = useState([
     {
       name: "Lap 1",
-      clicked: false
+      clicked: false,
     },
     {
       name: "Lap 2",
-      clicked: false
+      clicked: false,
     },
     {
       name: "Lap Storz",
-      clicked: false
+      clicked: false,
     },
     {
       name: "Arthro 1",
-      clicked: false
+      clicked: false,
     },
     {
       name: "Arthro 2",
-      clicked: false
+      clicked: false,
     },
     {
       name: "ENT 1",
-      clicked: false
+      clicked: false,
     },
     {
       name: "ENT 2",
-      clicked: false
+      clicked: false,
     },
     {
       name: "Flexiscope",
-      clicked: false
+      clicked: false,
     },
     {
       name: "Cysto",
-      clicked: false
+      clicked: false,
     },
     {
       name: "Laser",
-      clicked: false
+      clicked: false,
     },
     {
       name: "Hysto",
-      clicked: false
+      clicked: false,
     },
     {
       name: "Microscope",
-      clicked: false
+      clicked: false,
     },
     {
       name: "Olympus GI",
-      clicked: false
+      clicked: false,
     },
     {
       name: "Vein Harvest",
-      clicked: false
-    }
+      clicked: false,
+    },
   ]);
 
   const [currentSpecialty, setCurrentSpecialty] = useState(null);
 
   // Select Specialty
-  const selectSpecialty = index => {
+  const selectSpecialty = (index) => {
     setSixteenSpecialties(
       sixteenSpecialties.map((specialty, i) => {
         if (i === index && consoles.length != 0) {
@@ -127,7 +127,7 @@ const HomePage = () => {
   };
 
   // Toggle function
-  const toggleOpenDisplay = index => {
+  const toggleOpenDisplay = (index) => {
     setCameras(
       cameras.map((camera, i) => {
         if (i === index) {
@@ -140,7 +140,7 @@ const HomePage = () => {
     );
   };
 
-  const toggleDisplayButtonColor = index => {
+  const toggleDisplayButtonColor = (index) => {
     setsMonitor(
       monitors.map((monitor, i) => {
         if (i === index && consoles.length != 0) {
@@ -153,7 +153,7 @@ const HomePage = () => {
     );
   };
 
-  const updateConsoles = index => {
+  const updateConsoles = (index) => {
     if (consoles.length === 0) {
       const currentConsoles = [...consoles, cameras[index]];
       setConsoles(currentConsoles);
@@ -171,8 +171,12 @@ const HomePage = () => {
     }
   };
   // Update Monitor
-  const selectDisplay = index => {
-    if (consoles[1]) {
+  const selectDisplay = (index) => {
+    if (consoles[1] && consoles[2]) {
+      const currentConsoles = [...consoles];
+      currentConsoles.splice(1, 1, "-");
+      setConsoles(currentConsoles);
+    } else if (consoles[1]) {
       const currentConsoles = [...consoles];
       currentConsoles.splice(1, 1, monitors[index]);
       setConsoles(currentConsoles);
@@ -183,15 +187,13 @@ const HomePage = () => {
   };
 
   // Update Specialty
-  const updateSpecialty = index => {
+  const updateSpecialty = (index) => {
     console.log("inside updatespecialty", sixteenSpecialties[index].clicked);
     if (consoles[2] && sixteenSpecialties[index].clicked === true) {
-      console.log("clicked", sixteenSpecialties[index].clicked);
       const currentConsoles = [...consoles];
       currentConsoles.splice(2, 2, sixteenSpecialties[index]);
       setConsoles(currentConsoles);
     } else if (consoles[2] && sixteenSpecialties[index].clicked === false) {
-      console.log("not clicked", sixteenSpecialties[index].clicked);
       const currentConsoles = [...consoles];
       currentConsoles.splice(2, 1);
       setConsoles(currentConsoles);
@@ -202,7 +204,7 @@ const HomePage = () => {
   };
 
   // Current Specialty
-  const updateCurrentSpecialty = index => {
+  const updateCurrentSpecialty = (index) => {
     sixteenSpecialties.map((specialty, i) => {
       if (i === index) {
         let usersSpecialty = currentSpecialty;
