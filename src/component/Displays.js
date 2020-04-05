@@ -1,7 +1,7 @@
 import React from "react";
 import "./displays.css";
 
-const Displays = props => {
+const Displays = (props) => {
   const sixteenDisplayList = props.monitors.map((monitor, index) => {
     if (monitor.name != "HDTV Wise") {
       return (
@@ -12,7 +12,7 @@ const Displays = props => {
           <div
             index={index}
             onClick={() => {
-              props.selectDisplay(index);
+              // props.selectDisplay(index);
               props.toggleDisplayButtonColor(index);
             }}
             className={"monitor-button " + (monitor.clicked ? "clicked" : "")}

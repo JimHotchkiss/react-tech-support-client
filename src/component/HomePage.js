@@ -148,6 +148,7 @@ const HomePage = () => {
         } else {
           monitor.clicked = false;
         }
+        selectDisplay(index);
         return monitor;
       })
     );
@@ -172,13 +173,24 @@ const HomePage = () => {
   };
   // Update Monitor
   const selectDisplay = (index) => {
-    if (consoles[1] && consoles[2]) {
+    if (
+      consoles[1] &&
+      consoles[1] != "-" &&
+      !consoles[1].clicked &&
+      consoles[2]
+    ) {
       const currentConsoles = [...consoles];
       currentConsoles.splice(1, 1, "-");
       setConsoles(currentConsoles);
-    } else if (consoles[1]) {
+    } else if (consoles[1] && consoles[1] === "-" && consoles[2]) {
+      console.log("inside A");
       const currentConsoles = [...consoles];
       currentConsoles.splice(1, 1, monitors[index]);
+      setConsoles(currentConsoles);
+    } else if (consoles[1] && consoles[1].clicked === false) {
+      console.log("inside B");
+      const currentConsoles = [...consoles];
+      currentConsoles.splice(1, 1);
       setConsoles(currentConsoles);
     } else {
       const currentConsoles = [...consoles, monitors[index]];
