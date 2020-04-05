@@ -157,14 +157,15 @@ const HomePage = () => {
   };
 
   const updateSelection = (index) => {
-    if (consoles[1] && sixteenSpecialties[index].clicked) {
+    console.log("1:", consoles);
+    if (consoles[2] && consoles[2].clicked === false) {
+      console.log("2:", consoles);
+      const currentConsoles = [...consoles];
+      currentConsoles.splice(2, 1, sixteenSpecialties[index]);
+      setConsoles(currentConsoles);
+    } else if (consoles[1] && sixteenSpecialties[index].clicked) {
       const currentConsoles = [...consoles];
       currentConsoles.push(sixteenSpecialties[index]);
-      setConsoles(currentConsoles);
-    } else if (consoles[2] && consoles[2].clicked === false) {
-      console.log("inside");
-      const currentConsoles = [...consoles];
-      currentConsoles.splice(1, 1, sixteenSpecialties[index]);
       setConsoles(currentConsoles);
     } else if (consoles.length === 0 && cameras[index].clicked) {
       const currentConsoles = [...consoles, cameras[index]];
