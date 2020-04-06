@@ -1,9 +1,15 @@
 import React from "react";
 const SettingsInstructions = (props) => {
-  let clicked;
+  console.log(props.consoles);
+  let displayClicked;
+  let specialtyClicked;
 
   if (props.consoles[1]) {
-    clicked = props.consoles[1].clicked;
+    displayClicked = props.consoles[1].clicked;
+  }
+
+  if (props.consoles[2]) {
+    specialtyClicked = props.consoles[2].clicked;
   }
   const cameraInstructions = (
     <p className="info-p-tag">
@@ -29,9 +35,9 @@ const SettingsInstructions = (props) => {
           : props.consoles[0] &&
             props.consoles[0].open &&
             props.consoles[2] &&
-            !clicked
+            !displayClicked
           ? displayInstructions
-          : props.consoles[0] && props.consoles[0].open && !clicked
+          : props.consoles[0] && props.consoles[0].open && !displayClicked
           ? displayInstructions
           : cameraInstructions}
       </div>

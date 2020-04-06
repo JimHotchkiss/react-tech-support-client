@@ -157,6 +157,7 @@ const HomePage = () => {
   };
 
   const updateSelection = (index) => {
+    console.log(sixteenSpecialties[index]);
     if (
       consoles[0] &&
       consoles[1] &&
@@ -170,6 +171,10 @@ const HomePage = () => {
       specialtyToggle.clicked = false;
       const currentConsoles = [];
       currentConsoles.push(cameras[index]);
+      setConsoles(currentConsoles);
+    } else if (consoles[2] && !consoles[2].clicked) {
+      const currentConsoles = [...consoles];
+      currentConsoles.splice(2, 1, sixteenSpecialties[index]);
       setConsoles(currentConsoles);
     } else if (consoles[0] && consoles[1] && consoles[2] && !consoles[0].open) {
       const displayToggle = consoles[1];
