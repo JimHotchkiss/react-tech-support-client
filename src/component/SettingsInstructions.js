@@ -1,8 +1,8 @@
 import React from "react";
 const SettingsInstructions = (props) => {
-  console.log(props.consoles);
   let displayClicked;
   let specialtyClicked;
+  let currentDisplay;
 
   if (props.consoles[1]) {
     displayClicked = props.consoles[1].clicked;
@@ -10,6 +10,10 @@ const SettingsInstructions = (props) => {
 
   if (props.consoles[2]) {
     specialtyClicked = props.consoles[2].clicked;
+  }
+
+  if (props.consoles[1]) {
+    currentDisplay = props.consoles[1];
   }
   const cameraInstructions = (
     <p className="info-p-tag">
@@ -24,7 +28,7 @@ const SettingsInstructions = (props) => {
   const specialtyInstructions = (
     <p className="info-p-tag">Select a Specialty to display settings.</p>
   );
-
+  console.log(props.consoles);
   return (
     <div className="instructions-div">
       <div className="info-text-div">
@@ -32,12 +36,7 @@ const SettingsInstructions = (props) => {
           ? null
           : props.consoles[1]
           ? specialtyInstructions
-          : props.consoles[0] &&
-            props.consoles[0].open &&
-            props.consoles[2] &&
-            !displayClicked
-          ? displayInstructions
-          : props.consoles[0] && props.consoles[0].open && !displayClicked
+          : props.consoles[0]
           ? displayInstructions
           : cameraInstructions}
       </div>

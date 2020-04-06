@@ -172,9 +172,10 @@ const HomePage = () => {
       const currentConsoles = [];
       currentConsoles.push(cameras[index]);
       setConsoles(currentConsoles);
-    } else if (consoles[2] && !consoles[2].clicked) {
+    } else if (consoles[2] && consoles[2].clicked === false) {
+      console.log("here", sixteenSpecialties[index]);
       const currentConsoles = [...consoles];
-      currentConsoles.splice(2, 1, sixteenSpecialties[index]);
+      currentConsoles.splice(2, 1);
       setConsoles(currentConsoles);
     } else if (consoles[0] && consoles[1] && consoles[2] && !consoles[0].open) {
       const displayToggle = consoles[1];
