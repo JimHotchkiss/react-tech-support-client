@@ -8,11 +8,6 @@
 .specialty-component-div {
   display: flex;
 }
-
-.specialty-div.settings {
-  margin: 40px 0px 0px 0px;
-}
-
 .specialty {
   height: 35px;
   width: auto;

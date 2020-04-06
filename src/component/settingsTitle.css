@@ -3,6 +3,10 @@
   left: 40px;
 }
 
+.specialty-div.settings {
+  margin: 50px 0px 0px 0px;
+}
+
 .settings-title-div {
   position: absolute;
   top: 40px;

@@ -3,13 +3,17 @@ import SettingsInstructions from "./SettingsInstructions";
 import Specialties from "./Specialties";
 
 const SettingsTitle = (props) => {
+  console.log(props);
+
+  let specialtyClicked = null;
+  if (props.consoles[2]) {
+    specialtyClicked = props.consoles[2];
+  }
   const specialty = (
     <div
       className={
         "specialty-div " +
-        (props.currentSpecialty != null && props.currentSpecialty.clicked
-          ? "settings"
-          : "")
+        (specialtyClicked != null && specialtyClicked.clicked ? "settings" : "")
       }
     >
       <Specialties
