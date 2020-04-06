@@ -155,7 +155,7 @@ const HomePage = () => {
   };
 
   const updateSelection = (index) => {
-    console.log("cameras:", cameras[index].open);
+    console.log("cameras:", cameras[index]);
     if (
       consoles[0] &&
       consoles[1] &&
@@ -163,7 +163,7 @@ const HomePage = () => {
       consoles[0].open === false &&
       cameras[index].open
     ) {
-      console.log("inside");
+      console.log("inside A");
       const displayToggle = consoles[1];
       displayToggle.clicked = false;
       const specialtyToggle = consoles[2];
@@ -177,27 +177,32 @@ const HomePage = () => {
       consoles[2] &&
       consoles[0].open === false
     ) {
-      console.log("inside");
+      console.log("inside B");
       const displayToggle = consoles[1];
       displayToggle.clicked = false;
       const specialtyToggle = consoles[2];
       specialtyToggle.clicked = false;
       const currentConsoles = [];
       setConsoles(currentConsoles);
-    } else if (consoles[2] && consoles[2].clicked === false) {
+    } else if (
+      consoles[2] &&
+      consoles[2].clicked === false &&
+      sixteenSpecialties[index].clicked
+    ) {
       const currentConsoles = [...consoles];
-      currentConsoles.splice(2, 1, "shit");
-      setConsoles(currentConsoles);
-    } else if (consoles[0] && consoles[1] && consoles[2] && !consoles[0].open) {
-      const displayToggle = consoles[1];
-      displayToggle.clicked = false;
-      const specialtyToggle = consoles[2];
-      specialtyToggle.clicked = false;
-      const currentConsoles = [];
+      currentConsoles.splice(2, 1, sixteenSpecialties[index]);
       setConsoles(currentConsoles);
     } else if (consoles[2] && consoles[2].clicked === false) {
       const currentConsoles = [...consoles];
       currentConsoles.splice(2, 1);
+      setConsoles(currentConsoles);
+    } else if (consoles[0] && consoles[1] && consoles[2] && !consoles[0].open) {
+      console.log("inside F");
+      const displayToggle = consoles[1];
+      displayToggle.clicked = false;
+      const specialtyToggle = consoles[2];
+      specialtyToggle.clicked = false;
+      const currentConsoles = [];
       setConsoles(currentConsoles);
     } else if (consoles[2] && consoles[1] === "-") {
       const currentConsoles = [...consoles];
@@ -216,15 +221,28 @@ const HomePage = () => {
       currentConsoles.push(sixteenSpecialties[index]);
       setConsoles(currentConsoles);
     } else if (consoles.length === 0 && cameras[index].clicked) {
+      console.log("inside C");
       const currentConsoles = [...consoles, cameras[index]];
       setConsoles(currentConsoles);
     } else if (consoles.length === 0 && cameras[index].clicked) {
+      console.log("inside D");
       const currentConsoles = [...consoles, cameras[index]];
       setConsoles(currentConsoles);
-    } else if (consoles[0] && consoles[1] && consoles[0].open === false) {
+    } else if (
+      consoles[0] &&
+      consoles[1] &&
+      cameras[index] &&
+      cameras[index].open
+    ) {
+      console.log("inside E");
       const displayToggle = consoles[1];
       displayToggle.clicked = false;
       const currentConsoles = [];
+      currentConsoles.push(cameras[index]);
+      setConsoles(currentConsoles);
+    } else if (consoles[0] && consoles[0].open) {
+      console.log("inside G");
+      const currentConsoles = [...consoles, monitors[index]];
       setConsoles(currentConsoles);
     } else if (
       consoles[0] &&
