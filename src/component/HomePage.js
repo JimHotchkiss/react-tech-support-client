@@ -155,12 +155,11 @@ const HomePage = () => {
   };
 
   const updateSelection = (index) => {
-    console.log("cameras:", cameras[index]);
+    console.log(index);
     if (
-      consoles[0] &&
-      consoles[1] &&
       consoles[2] &&
       consoles[0].open === false &&
+      cameras[index] &&
       cameras[index].open
     ) {
       console.log("inside A");
@@ -216,6 +215,7 @@ const HomePage = () => {
       currentConsoles.splice(1, 1, monitors[index]);
       setConsoles(currentConsoles);
     } else if (consoles[2] && consoles[1].clicked === false) {
+      console.log("inside M");
       const currentConsoles = [...consoles];
       currentConsoles.splice(1, 1, "-");
       setConsoles(currentConsoles);
@@ -259,7 +259,7 @@ const HomePage = () => {
       currentConsoles.splice(1, 1, monitors[index]);
       setConsoles(currentConsoles);
     } else if (consoles[0] && consoles[1] && consoles[1].clicked === false) {
-      console.log("inside K");
+      console.log("inside K", consoles);
       const currentConsoles = [...consoles];
       currentConsoles.splice(1, 1);
       setConsoles(currentConsoles);
@@ -289,7 +289,7 @@ const HomePage = () => {
       const currentConsoles = [];
       setConsoles(currentConsoles);
     } else {
-      console.log("inside I");
+      console.log("inside I", cameras[index]);
       const currentConsoles = [...consoles];
       currentConsoles.splice(0, 1, cameras[index]);
       setConsoles(currentConsoles);
