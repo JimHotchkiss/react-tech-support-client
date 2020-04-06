@@ -3,7 +3,7 @@ import "./displays.css";
 
 const Displays = (props) => {
   const sixteenDisplayList = props.monitors.map((monitor, index) => {
-    if (monitor.name != "HDTV Wise") {
+    if (monitor.name !== "HDTV Wise") {
       return (
         <div
           key={monitor.name}

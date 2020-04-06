@@ -109,14 +109,11 @@ const HomePage = () => {
       clicked: false,
     },
   ]);
-
-  const [currentSpecialty, setCurrentSpecialty] = useState(null);
-
   // Toggle Specialty
   const toggleSpecialty = (index) => {
     setSixteenSpecialties(
       sixteenSpecialties.map((specialty, i) => {
-        if (i === index && consoles.length != 0) {
+        if (i === index && consoles.length !== 0) {
           specialty.clicked = !specialty.clicked;
         } else {
           specialty.clicked = false;
@@ -129,6 +126,7 @@ const HomePage = () => {
 
   // Toggle camera
   const toggleCamera = (index) => {
+    console.log(cameras[index]);
     setCameras(
       cameras.map((camera, i) => {
         if (i === index) {
@@ -145,7 +143,7 @@ const HomePage = () => {
   const toggleDisplay = (index) => {
     setsMonitor(
       monitors.map((monitor, i) => {
-        if (i === index && consoles.length != 0) {
+        if (i === index && consoles.length !== 0) {
           monitor.clicked = !monitor.clicked;
         } else {
           monitor.clicked = false;
@@ -157,14 +155,15 @@ const HomePage = () => {
   };
 
   const updateSelection = (index) => {
-    console.log("consoles:", consoles);
+    console.log("cameras:", cameras[index].open);
     if (
       consoles[0] &&
       consoles[1] &&
       consoles[2] &&
-      !consoles[0].open &&
+      consoles[0].open === false &&
       cameras[index].open
     ) {
+      console.log("inside");
       const displayToggle = consoles[1];
       displayToggle.clicked = false;
       const specialtyToggle = consoles[2];
@@ -172,9 +171,22 @@ const HomePage = () => {
       const currentConsoles = [];
       currentConsoles.push(cameras[index]);
       setConsoles(currentConsoles);
+    } else if (
+      consoles[0] &&
+      consoles[1] &&
+      consoles[2] &&
+      consoles[0].open === false
+    ) {
+      console.log("inside");
+      const displayToggle = consoles[1];
+      displayToggle.clicked = false;
+      const specialtyToggle = consoles[2];
+      specialtyToggle.clicked = false;
+      const currentConsoles = [];
+      setConsoles(currentConsoles);
     } else if (consoles[2] && consoles[2].clicked === false) {
       const currentConsoles = [...consoles];
-      currentConsoles.splice(2, 1);
+      currentConsoles.splice(2, 1, "shit");
       setConsoles(currentConsoles);
     } else if (consoles[0] && consoles[1] && consoles[2] && !consoles[0].open) {
       const displayToggle = consoles[1];

@@ -14,9 +14,7 @@ const Cameras = (props) => {
           <div className="li-icon-div">
             <div className="console-li-div">
               <li className="console-li-element">
-                <a index={index} href="#">
-                  {camera.name}
-                </a>
+                <a index={index}>{camera.name}</a>
               </li>
             </div>
             <Arrow camera={camera} />
