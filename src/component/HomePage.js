@@ -157,11 +157,27 @@ const HomePage = () => {
   };
 
   const updateSelection = (index) => {
-    console.log(consoles[2]);
-    if (consoles[2] && consoles[2].clicked === false) {
+    console.log("camera[index]", !cameras[index].clicked);
+    if (consoles[0] && consoles[1] && consoles[2] && !consoles[0].open) {
+      console.log("specialty toggle:", consoles);
+      const displayToggle = consoles[1];
+      displayToggle.clicked = false;
+      const specialtyToggle = consoles[2];
+      specialtyToggle.clicked = false;
+      const currentConsoles = [];
+      setConsoles(currentConsoles);
+    } else if (consoles[2] && consoles[2].clicked === false) {
       console.log("2:", consoles);
       const currentConsoles = [...consoles];
       currentConsoles.splice(2, 1);
+      setConsoles(currentConsoles);
+    } else if (consoles[2] && consoles[1] === "-") {
+      const currentConsoles = [...consoles];
+      currentConsoles.splice(1, 1, monitors[index]);
+      setConsoles(currentConsoles);
+    } else if (consoles[2] && consoles[1].clicked === false) {
+      const currentConsoles = [...consoles];
+      currentConsoles.splice(1, 1, "-");
       setConsoles(currentConsoles);
     } else if (consoles[2]) {
       console.log("3:", consoles);
@@ -175,10 +191,10 @@ const HomePage = () => {
     } else if (consoles.length === 0 && cameras[index].clicked) {
       const currentConsoles = [...consoles, cameras[index]];
       setConsoles(currentConsoles);
-    } else if (consoles.length === 0) {
+    } else if (consoles.length === 0 && !cameras[index].clicked) {
       const currentConsoles = [...consoles, cameras[index]];
       setConsoles(currentConsoles);
-    } else if (consoles[0] && consoles[1] && !consoles[0].open) {
+    } else if (consoles[0] && consoles[1] && consoles[0].open === false) {
       const displayToggle = consoles[1];
       displayToggle.clicked = false;
       const currentConsoles = [];
