@@ -184,6 +184,12 @@ const HomePage = () => {
       specialtyToggle.clicked = false;
       const currentConsoles = [];
       setConsoles(currentConsoles);
+    } else if (consoles[0] && consoles[1] && consoles[0].open === false) {
+      console.log("inside K");
+      const displayToggle = consoles[1];
+      displayToggle.clicked = false;
+      const currentConsoles = [];
+      setConsoles(currentConsoles);
     } else if (
       consoles[2] &&
       consoles[2].clicked === false &&
@@ -193,6 +199,7 @@ const HomePage = () => {
       currentConsoles.splice(2, 1, sixteenSpecialties[index]);
       setConsoles(currentConsoles);
     } else if (consoles[2] && consoles[2].clicked === false) {
+      console.log("inside H");
       const currentConsoles = [...consoles];
       currentConsoles.splice(2, 1);
       setConsoles(currentConsoles);
@@ -240,6 +247,22 @@ const HomePage = () => {
       const currentConsoles = [];
       currentConsoles.push(cameras[index]);
       setConsoles(currentConsoles);
+    } else if (
+      consoles[0] &&
+      consoles[1] &&
+      consoles[1].clicked === false &&
+      monitors[index] &&
+      monitors[index].clicked === false
+    ) {
+      console.log("inside L");
+      const currentConsoles = [...consoles];
+      currentConsoles.splice(1, 1, monitors[index]);
+      setConsoles(currentConsoles);
+    } else if (consoles[0] && consoles[1] && consoles[1].clicked === false) {
+      console.log("inside K");
+      const currentConsoles = [...consoles];
+      currentConsoles.splice(1, 1);
+      setConsoles(currentConsoles);
     } else if (consoles[0] && consoles[0].open) {
       console.log("inside G");
       const currentConsoles = [...consoles, monitors[index]];
@@ -261,7 +284,12 @@ const HomePage = () => {
       const currentConsoles = [...consoles];
       currentConsoles.splice(1, 2);
       setConsoles(currentConsoles);
+    } else if (consoles[0] && consoles[0].open === false) {
+      console.log("inside J");
+      const currentConsoles = [];
+      setConsoles(currentConsoles);
     } else {
+      console.log("inside I");
       const currentConsoles = [...consoles];
       currentConsoles.splice(0, 1, cameras[index]);
       setConsoles(currentConsoles);
