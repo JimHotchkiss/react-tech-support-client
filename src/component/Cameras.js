@@ -26,7 +26,6 @@ const Cameras = (props) => {
           consoles={props.consoles}
           camera={camera}
           monitors={props.monitors}
-          selectDisplay={props.selectDisplay}
           toggleDisplay={props.toggleDisplay}
         />
       </div>

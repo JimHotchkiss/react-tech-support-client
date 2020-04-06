@@ -157,7 +157,7 @@ const HomePage = () => {
   };
 
   const updateSelection = (index) => {
-    console.log(sixteenSpecialties[index]);
+    console.log("consoles:", consoles);
     if (
       consoles[0] &&
       consoles[1] &&
@@ -173,7 +173,6 @@ const HomePage = () => {
       currentConsoles.push(cameras[index]);
       setConsoles(currentConsoles);
     } else if (consoles[2] && consoles[2].clicked === false) {
-      console.log("here", sixteenSpecialties[index]);
       const currentConsoles = [...consoles];
       currentConsoles.splice(2, 1);
       setConsoles(currentConsoles);
