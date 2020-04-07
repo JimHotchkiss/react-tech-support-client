@@ -5,12 +5,7 @@ const Cameras = (props) => {
   const cameraList = props.cameras.map((camera, index) => {
     return (
       <div className="camera-outside-div" key={index}>
-        <div
-          index={index}
-          onClick={() => {
-            props.toggleCamera(index);
-          }}
-        >
+        <div index={index} onClick={props.handleCamera.bind(this, index)}>
           <div className="li-icon-div">
             <div className="console-li-div">
               <li className="console-li-element">
@@ -24,7 +19,7 @@ const Cameras = (props) => {
           consoles={props.consoles}
           camera={camera}
           monitors={props.monitors}
-          toggleDisplay={props.toggleDisplay}
+          handleDisplay={props.handleDisplay}
         />
       </div>
     );

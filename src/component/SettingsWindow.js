@@ -4,11 +4,10 @@ import SettingsTitle from "./SettingsTitle";
 import "./settingsTitle.css";
 
 const SettingsWindow = (props) => {
-  console.log("consoles:", props.consoles);
   return (
     <div className="settings-window-div">
       <SettingsTitle
-        toggleSpecialty={props.toggleSpecialty}
+        handleSpecialty={props.handleSpecialty}
         selectSpecialty={props.selectSpecialty}
         sixteenSpecialties={props.sixteenSpecialties}
         consoles={props.consoles}

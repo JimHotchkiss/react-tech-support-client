@@ -10,8 +10,8 @@ const ConsoleTab = (props) => {
         <ConsoleCategory />
         <Consoles
           consoles={props.consoles}
-          toggleCamera={props.toggleCamera}
-          toggleDisplay={props.toggleDisplay}
+          handleCamera={props.handleCamera}
+          handleDisplay={props.handleDisplay}
           cameras={props.cameras}
           monitors={props.monitors}
         />

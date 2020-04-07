@@ -1,20 +1,5 @@
 import React from "react";
 const SettingsInstructions = (props) => {
-  let displayClicked;
-  let specialtyClicked;
-  let currentDisplay;
-
-  if (props.consoles[1]) {
-    displayClicked = props.consoles[1].clicked;
-  }
-
-  if (props.consoles[2]) {
-    specialtyClicked = props.consoles[2].clicked;
-  }
-
-  if (props.consoles[1]) {
-    currentDisplay = props.consoles[1];
-  }
   const cameraInstructions = (
     <p className="info-p-tag">
       Select a CCU, monitor and specialty to display settings.
@@ -31,13 +16,9 @@ const SettingsInstructions = (props) => {
   return (
     <div className="instructions-div">
       <div className="info-text-div">
-        {props.consoles[2]
-          ? null
-          : props.consoles[1]
-          ? specialtyInstructions
-          : props.consoles[0]
-          ? displayInstructions
-          : cameraInstructions}
+        <p className="info-p-tag">
+          Select a CCU, monitor and specialty to display settings.
+        </p>
       </div>
     </div>
   );

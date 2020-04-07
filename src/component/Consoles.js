@@ -6,12 +6,11 @@ const Consoles = (props) => {
   return (
     <div>
       <Cameras
-        toggleCamera={props.toggleCamera}
-        toggleDisplay={props.toggleDisplay}
+        handleCamera={props.handleCamera}
+        handleDisplay={props.handleDisplay}
         cameras={props.cameras}
         monitors={props.monitors}
         consoles={props.consoles}
-        selectDisplay={props.selectDisplay}
       />
     </div>
   );
