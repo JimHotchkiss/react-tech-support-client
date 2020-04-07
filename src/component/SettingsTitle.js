@@ -32,7 +32,9 @@ const SettingsTitle = (props) => {
       <div
         className={
           "info-div " +
-          (props.currentSpecialty[0] && props.currentSpecialty[0].clicked
+          (props.currentCamera[0] && props.currentCamera[0].open === false
+            ? null
+            : props.currentSpecialty[0] && props.currentSpecialty[0].clicked
             ? "settings"
             : null)
         }
