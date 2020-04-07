@@ -168,7 +168,8 @@ const HomePage = () => {
     setCurrentDisplay(results);
   };
   const updateCurrentSpecialty = (index) => {
-    console.log(index);
+    const results = specialties.filter((specialty, i) => i === index);
+    setCurrentSpecialty(results);
   };
   return (
     <div className="home-page-div">
@@ -187,6 +188,7 @@ const HomePage = () => {
       <SettingsWindow
         handleSpecialty={handleSpecialty}
         specialties={specialties}
+        currentSpecialty={currentSpecialty}
         monitors={monitors}
         currentCamera={currentCamera}
         currentDisplay={currentDisplay}

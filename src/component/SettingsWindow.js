@@ -12,6 +12,7 @@ const SettingsWindow = (props) => {
         consoles={props.consoles}
         currentCamera={props.currentCamera}
         currentDisplay={props.currentDisplay}
+        currentSpecialty={props.currentSpecialty}
       />
     </div>
   );

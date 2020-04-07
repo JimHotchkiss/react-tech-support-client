@@ -2,7 +2,7 @@ import React from "react";
 import "./specialties.css";
 
 const Specialties = (props) => {
-  const sixteenSpecialtiesList = props.specialties.map((specialty, index) => {
+  const specialtiesList = props.specialties.map((specialty, index) => {
     return (
       <a href="#" key={index}>
         <div
@@ -20,7 +20,7 @@ const Specialties = (props) => {
       <div className="specialty-title-div">
         <p className="specialty-title-tag">Specialty:</p>
       </div>
-      <div className="specialty-list-div">{sixteenSpecialtiesList}</div>
+      <div className="specialty-list-div">{specialtiesList}</div>
     </div>
   );
 };

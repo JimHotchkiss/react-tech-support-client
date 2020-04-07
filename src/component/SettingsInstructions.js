@@ -17,7 +17,9 @@ const SettingsInstructions = (props) => {
   return (
     <div className="instructions-div">
       <div className="info-text-div">
-        {props.currentDisplay[0] && props.currentDisplay[0].clicked
+        {props.currentSpecialty[0] && props.currentSpecialty[0].clicked
+          ? null
+          : props.currentDisplay[0] && props.currentDisplay[0].clicked
           ? specialtyInstructions
           : props.currentCamera[0] && props.currentCamera[0].open
           ? displayInstructions

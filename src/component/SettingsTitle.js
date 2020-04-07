@@ -8,6 +8,7 @@ const SettingsTitle = (props) => {
       <Specialties
         handleSpecialty={props.handleSpecialty}
         specialties={props.specialties}
+        currentSpecialty={props.currentSpecialty}
       />
     </div>
   );
@@ -19,6 +20,7 @@ const SettingsTitle = (props) => {
         <SettingsInstructions
           currentCamera={props.currentCamera}
           currentDisplay={props.currentDisplay}
+          currentSpecialty={props.currentSpecialty}
         />
       </div>
       {specialty}
