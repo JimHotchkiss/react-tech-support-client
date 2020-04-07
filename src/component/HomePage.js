@@ -126,9 +126,9 @@ const HomePage = () => {
 
   // Toggle camera
   const toggleCamera = (index) => {
-    console.log(cameras[index]);
     setCameras(
       cameras.map((camera, i) => {
+        console.log(camera, i, index);
         if (i === index) {
           camera.open = !camera.open;
         } else {
@@ -155,39 +155,41 @@ const HomePage = () => {
   };
 
   const updateSelection = (index) => {
-    console.log(index);
+    console.log(cameras[index]);
     if (
       consoles[2] &&
+      consoles[1] &&
       consoles[0].open === false &&
       cameras[index] &&
       cameras[index].open
     ) {
       console.log("inside A");
-      const displayToggle = consoles[1];
-      displayToggle.clicked = false;
-      const specialtyToggle = consoles[2];
-      specialtyToggle.clicked = false;
-      const currentConsoles = [];
-      currentConsoles.push(cameras[index]);
+      const currentConsoles = [...consoles];
+      currentConsoles.splice(0, 1, cameras[index]);
       setConsoles(currentConsoles);
     } else if (
       consoles[0] &&
       consoles[1] &&
       consoles[2] &&
-      consoles[0].open === false
+      consoles[0].open === false &&
+      cameras[index].open === false
     ) {
-      console.log("inside B");
+      console.log("inside B", cameras[index].open);
       const displayToggle = consoles[1];
       displayToggle.clicked = false;
       const specialtyToggle = consoles[2];
       specialtyToggle.clicked = false;
       const currentConsoles = [];
       setConsoles(currentConsoles);
-    } else if (consoles[0] && consoles[1] && consoles[0].open === false) {
-      console.log("inside K");
-      const displayToggle = consoles[1];
-      displayToggle.clicked = false;
-      const currentConsoles = [];
+    } else if (
+      consoles[0] &&
+      consoles[1] &&
+      sixteenSpecialties[index] &&
+      sixteenSpecialties[index].clicked
+    ) {
+      console.log("inside K", sixteenSpecialties[index]);
+      const currentConsoles = [...consoles];
+      currentConsoles.splice(2, 1, sixteenSpecialties[index]);
       setConsoles(currentConsoles);
     } else if (
       consoles[2] &&
@@ -220,6 +222,7 @@ const HomePage = () => {
       currentConsoles.splice(1, 1, "-");
       setConsoles(currentConsoles);
     } else if (consoles[2]) {
+      console.log("inside P");
       const currentConsoles = [...consoles];
       currentConsoles.splice(2, 1, sixteenSpecialties[index]);
       setConsoles(currentConsoles);
@@ -256,11 +259,6 @@ const HomePage = () => {
     ) {
       console.log("inside L");
       const currentConsoles = [...consoles];
-      currentConsoles.splice(1, 1, monitors[index]);
-      setConsoles(currentConsoles);
-    } else if (consoles[0] && consoles[1] && consoles[1].clicked === false) {
-      console.log("inside K", consoles);
-      const currentConsoles = [...consoles];
       currentConsoles.splice(1, 1);
       setConsoles(currentConsoles);
     } else if (consoles[0] && consoles[0].open) {
@@ -273,20 +271,24 @@ const HomePage = () => {
       monitors[index] &&
       monitors[index].clicked
     ) {
+      console.log("inside Q");
       const currentConsoles = [...consoles];
       currentConsoles.splice(1, 1, monitors[index]);
       setConsoles(currentConsoles);
     } else if (consoles[0] && monitors[index] && monitors[index].clicked) {
+      console.log("inside O");
       const currentConsoles = [...consoles];
       currentConsoles.push(monitors[index]);
       setConsoles(currentConsoles);
     } else if (consoles[1] && monitors[index] && !monitors[index].clicked) {
+      console.log("inside N");
       const currentConsoles = [...consoles];
       currentConsoles.splice(1, 2);
       setConsoles(currentConsoles);
-    } else if (consoles[0] && consoles[0].open === false) {
-      console.log("inside J");
+    } else if (consoles[0] && cameras[index] && cameras[index].open) {
+      console.log("inside J", consoles);
       const currentConsoles = [];
+      currentConsoles.push(cameras[index]);
       setConsoles(currentConsoles);
     } else {
       console.log("inside I", cameras[index]);
