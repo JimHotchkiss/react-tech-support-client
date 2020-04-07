@@ -3,8 +3,12 @@
   left: 40px;
 }
 
+.specialty-div {
+  display: none;
+}
+
 .specialty-div.settings {
-  margin: 50px 0px 0px 0px;
+  display: inline-block;
 }
 
 .settings-title-div {
@@ -12,6 +16,10 @@
   top: 40px;
   margin: 0;
   padding: 0;
+}
+
+.settings-title-div.settings h3 {
+  margin: 0px 0px 35px 0px;
 }
 
 .settings-title-div h3 {
@@ -26,9 +34,9 @@
   padding: 30px 0px 0px 40px;
 }
 
-/* .info-div.settings {
+.info-div.settings {
   display: none;
-} */
+}
 .settings-info-icon-div {
   position: relative;
   top: 0px;

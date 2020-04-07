@@ -4,7 +4,14 @@ import Specialties from "./Specialties";
 
 const SettingsTitle = (props) => {
   const specialty = (
-    <div className="specialty-div">
+    <div
+      className={
+        "specialty-div " +
+        (props.currentDisplay[0] && props.currentDisplay[0].clicked
+          ? "settings"
+          : null)
+      }
+    >
       <Specialties
         handleSpecialty={props.handleSpecialty}
         specialties={props.specialties}
@@ -13,9 +20,23 @@ const SettingsTitle = (props) => {
     </div>
   );
   return (
-    <div className="settings-title-div">
+    <div
+      className={
+        "settings-title-div " +
+        (props.currentSpecialty[0] && props.currentSpecialty[0].clicked
+          ? "settings"
+          : null)
+      }
+    >
       <h3>Money Settings</h3>
-      <div className="info-div">
+      <div
+        className={
+          "info-div " +
+          (props.currentSpecialty[0] && props.currentSpecialty[0].clicked
+            ? "settings"
+            : null)
+        }
+      >
         <div className="settings-info-icon-div"></div>
         <SettingsInstructions
           currentCamera={props.currentCamera}
