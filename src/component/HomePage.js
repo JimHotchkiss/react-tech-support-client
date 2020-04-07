@@ -51,7 +51,7 @@ const HomePage = () => {
   ]);
 
   // Specialty Hook
-  const [sixteenSpecialties, setSixteenSpecialties] = useState([
+  const [specialties, setSpecialties] = useState([
     {
       name: "Lap 1",
       clicked: false,
@@ -116,8 +116,8 @@ const HomePage = () => {
   const [currentSpecialty, setCurrentSpecialty] = useState({});
   // Handle Specialty
   const handleSpecialty = (index) => {
-    setSixteenSpecialties(
-      sixteenSpecialties.map((specialty, i) => {
+    setSpecialties(
+      specialties.map((specialty, i) => {
         if (i === index) {
           specialty.clicked = !specialty.clicked;
         } else {
@@ -186,8 +186,10 @@ const HomePage = () => {
       </div>
       <SettingsWindow
         handleSpecialty={handleSpecialty}
-        sixteenSpecialties={sixteenSpecialties}
+        specialties={specialties}
         monitors={monitors}
+        currentCamera={currentCamera}
+        currentDisplay={currentDisplay}
       />
     </div>
   );

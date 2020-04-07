@@ -7,8 +7,7 @@ const SettingsTitle = (props) => {
     <div className="specialty-div">
       <Specialties
         handleSpecialty={props.handleSpecialty}
-        selectSpecialty={props.selectSpecialty}
-        sixteenSpecialties={props.sixteenSpecialties}
+        specialties={props.specialties}
       />
     </div>
   );
@@ -17,8 +16,12 @@ const SettingsTitle = (props) => {
       <h3>Money Settings</h3>
       <div className="info-div">
         <div className="settings-info-icon-div"></div>
-        <SettingsInstructions consoles={props.consoles} />
+        <SettingsInstructions
+          currentCamera={props.currentCamera}
+          currentDisplay={props.currentDisplay}
+        />
       </div>
+      {specialty}
     </div>
   );
 };

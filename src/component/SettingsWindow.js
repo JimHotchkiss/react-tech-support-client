@@ -8,9 +8,10 @@ const SettingsWindow = (props) => {
     <div className="settings-window-div">
       <SettingsTitle
         handleSpecialty={props.handleSpecialty}
-        selectSpecialty={props.selectSpecialty}
-        sixteenSpecialties={props.sixteenSpecialties}
+        specialties={props.specialties}
         consoles={props.consoles}
+        currentCamera={props.currentCamera}
+        currentDisplay={props.currentDisplay}
       />
     </div>
   );
