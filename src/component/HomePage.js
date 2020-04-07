@@ -113,6 +113,7 @@ const HomePage = () => {
   // Current Camera, Display, Specialty
   const [currentCamera, setCurrentCamera] = useState({});
   const [currentDisplay, setCurrentDisplay] = useState({});
+  const [currentSpecialty, setCurrentSpecialty] = useState({});
   // Handle Specialty
   const handleSpecialty = (index) => {
     setSixteenSpecialties(
@@ -122,10 +123,10 @@ const HomePage = () => {
         } else {
           specialty.clicked = false;
         }
-        // updateSelection(index);
         return specialty;
       })
     );
+    updateCurrentSpecialty(index);
   };
 
   // Toggle camera
@@ -166,6 +167,9 @@ const HomePage = () => {
     const results = monitors.filter((monitor, i) => i === index);
     setCurrentDisplay(results);
   };
+  const updateCurrentSpecialty = (index) => {
+    console.log(index);
+  };
   return (
     <div className="home-page-div">
       <Banner />
@@ -173,11 +177,11 @@ const HomePage = () => {
         <NavBar />
         <ConsoleTab
           cameras={cameras}
+          monitors={monitors}
           currentCamera={currentCamera}
           currentDisplay={currentDisplay}
           handleCamera={handleCamera}
           handleDisplay={handleDisplay}
-          monitors={monitors}
         />
       </div>
       <SettingsWindow
