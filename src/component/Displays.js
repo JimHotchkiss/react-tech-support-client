@@ -29,7 +29,7 @@ const Displays = (props) => {
       >
         <div
           index={index}
-          onClick={props.handleDisplay}
+          onClick={props.handleDisplay.bind(this, index)}
           className={"monitor-button " + (monitor.clicked ? "clicked" : "")}
         >
           <p>{monitor.name}</p>

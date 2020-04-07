@@ -109,7 +109,11 @@ const HomePage = () => {
       clicked: false,
     },
   ]);
-  // Toggle Specialty
+
+  // Current Camera, Display, Specialty
+  const [currentCamera, setCurrentCamera] = useState({});
+  const [currentDisplay, setCurrentDisplay] = useState({});
+  // Handle Specialty
   const handleSpecialty = (index) => {
     setSixteenSpecialties(
       sixteenSpecialties.map((specialty, i) => {
@@ -128,18 +132,17 @@ const HomePage = () => {
   const handleCamera = (index) => {
     setCameras(
       cameras.map((camera, i) => {
-        console.log(camera, i, index);
         if (i === index) {
           camera.open = !camera.open;
         } else {
           camera.open = false;
         }
-        // updateSelection(index);
         return camera;
       })
     );
+    updateCurrentCamera(index);
   };
-
+  // Handle Display
   const handleDisplay = (index) => {
     setsMonitor(
       monitors.map((monitor, i) => {
@@ -148,14 +151,20 @@ const HomePage = () => {
         } else {
           monitor.clicked = false;
         }
-        updateDisplay(index);
         return monitor;
       })
     );
+    updateCurrentDisplay(index);
   };
 
-  const updateDisplay = (index) => {
-    console.log(monitors);
+  const updateCurrentCamera = (index) => {
+    const results = cameras.filter((camera, i) => i === index);
+    setCurrentCamera(results);
+  };
+
+  const updateCurrentDisplay = (index) => {
+    const results = monitors.filter((monitor, i) => i === index);
+    setCurrentDisplay(results);
   };
   return (
     <div className="home-page-div">
@@ -164,6 +173,8 @@ const HomePage = () => {
         <NavBar />
         <ConsoleTab
           cameras={cameras}
+          currentCamera={currentCamera}
+          currentDisplay={currentDisplay}
           handleCamera={handleCamera}
           handleDisplay={handleDisplay}
           monitors={monitors}
