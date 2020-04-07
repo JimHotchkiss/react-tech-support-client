@@ -5,7 +5,12 @@ const Cameras = (props) => {
   const cameraList = props.cameras.map((camera, index) => {
     return (
       <div className="camera-outside-div" key={index}>
-        <div index={index} onClick={props.toggleCamera(index)}>
+        <div
+          index={index}
+          onClick={() => {
+            props.toggleCamera(index);
+          }}
+        >
           <div className="li-icon-div">
             <div className="console-li-div">
               <li className="console-li-element">
