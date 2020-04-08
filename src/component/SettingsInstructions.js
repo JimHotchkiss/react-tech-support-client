@@ -7,23 +7,28 @@ const SettingsInstructions = (props) => {
   );
   const cameraMonitorSpecialtyInstructions = (
     <p className="info-p-tag">
-      Select a CCU, monitor and specialty to display settings.
+      Select a CCU, Monitor and Specialty to show settings.
     </p>
   );
   const cameraInstructions = (
     <p className="info-p-tag">Select a CCU to display settings.</p>
   );
   const displayInstructions = (
-    <p className="info-p-tag">Select a Display to display settings.</p>
+    <p className="info-p-tag">Select a Monitor to display settings.</p>
   );
   const cameraSpecialtyInstructions = (
     <p className="info-p-tag">
-      Select a CCU and specialty to display settings.
+      Select a CCU and Specialty to display settings.
+    </p>
+  );
+  const cameraDisplayInstructions = (
+    <p className="info-p-tag">
+      Select a CCU and a Monitor to display settings.
     </p>
   );
   const displaySpecialtyInstructions = (
     <p className="info-p-tag">
-      Select a Display and specialty to display settings.
+      Select a Monitor and Specialty to display settings.
     </p>
   );
   const specialtyInstructions = (
@@ -35,9 +40,16 @@ const SettingsInstructions = (props) => {
         {props.currentCamera[0] &&
         props.currentCamera[0].open === false &&
         props.currentDisplay[0] &&
-        props.currentDisplay[0].clicked &&
+        props.currentDisplay[0].clicked == false &&
         props.currentSpecialty[0] &&
-        props.currentSpecialty[0].clicked == false
+        props.currentSpecialty[0].clicked
+          ? cameraDisplayInstructions
+          : props.currentCamera[0] &&
+            props.currentCamera[0].open === false &&
+            props.currentDisplay[0] &&
+            props.currentDisplay[0].clicked &&
+            props.currentSpecialty[0] &&
+            props.currentSpecialty[0].clicked == false
           ? cameraSpecialtyInstructions
           : props.currentCamera[0] &&
             props.currentCamera[0].open === false &&
