@@ -5,12 +5,23 @@ const SettingsInstructions = (props) => {
     props.currentDisplay,
     props.currentSpecialty
   );
-  const cameraInstructions = (
+  const cameraMonitorSpecialtyInstructions = (
     <p className="info-p-tag">
       Select a CCU, monitor and specialty to display settings.
     </p>
   );
+  const cameraInstructions = (
+    <p className="info-p-tag">Select a CCU to display settings.</p>
+  );
   const displayInstructions = (
+    <p className="info-p-tag">Select a Display to display settings.</p>
+  );
+  const cameraSpecialtyInstructions = (
+    <p className="info-p-tag">
+      Select a CCU and specialty to display settings.
+    </p>
+  );
+  const displaySpecialtyInstructions = (
     <p className="info-p-tag">
       Select a Display and specialty to display settings.
     </p>
@@ -22,26 +33,40 @@ const SettingsInstructions = (props) => {
     <div className="instructions-div">
       <div className="info-text-div">
         {props.currentCamera[0] &&
-        props.currentCamera[0].open &&
+        props.currentCamera[0].open === false &&
         props.currentDisplay[0] &&
-        props.currentDisplay[0].clicked === false &&
+        props.currentDisplay[0].clicked &&
         props.currentSpecialty[0] &&
-        props.currentSpecialty[0].clicked
+        props.currentSpecialty[0].clicked == false
+          ? cameraSpecialtyInstructions
+          : props.currentCamera[0] &&
+            props.currentCamera[0].open === false &&
+            props.currentDisplay[0] &&
+            props.currentDisplay[0].clicked &&
+            props.currentSpecialty[0] &&
+            props.currentSpecialty[0].clicked
+          ? cameraInstructions
+          : props.currentCamera[0] &&
+            props.currentCamera[0].open &&
+            props.currentDisplay[0] &&
+            props.currentDisplay[0].clicked === false &&
+            props.currentSpecialty[0] &&
+            props.currentSpecialty[0].clicked
           ? displayInstructions
           : props.currentCamera[0] && props.currentCamera[0].open === false
-          ? cameraInstructions
+          ? cameraMonitorSpecialtyInstructions
           : props.currentSpecialty[0] &&
             props.currentSpecialty[0].clicked &&
             props.currentDisplay[0] &&
             props.currentDisplay[0].clicked === false
-          ? displayInstructions
+          ? displaySpecialtyInstructions
           : props.currentSpecialty[0] && props.currentSpecialty[0].clicked
           ? null
           : props.currentDisplay[0] && props.currentDisplay[0].clicked
           ? specialtyInstructions
           : props.currentCamera[0] && props.currentCamera[0].open
-          ? displayInstructions
-          : cameraInstructions}
+          ? displaySpecialtyInstructions
+          : cameraMonitorSpecialtyInstructions}
       </div>
     </div>
   );
