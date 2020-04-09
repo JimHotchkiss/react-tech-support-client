@@ -9,23 +9,23 @@
 
 .specialty-div.settings {
   display: inline-block;
-  margin-right: 100px;
+  margin-right: 50px;
 }
 
 .settings-title-div {
   position: absolute;
-  top: 40px;
+  top: 25px;
   margin: 0;
   padding: 0;
 }
 
 .settings-title-div.settings h3 {
-  margin: 0px 0px 35px 0px;
+  margin: 0px 0px 25px 0px;
 }
 
 .settings-title-div h3 {
   font-family: Roboto;
-  margin: 0px 0px 35px 0px;
+  margin: 0px 0px 25px 0px;
   font-size: 28px;
   padding-left: 40px;
   color: #000000;
