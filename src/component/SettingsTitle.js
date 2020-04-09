@@ -1,6 +1,7 @@
 import React from "react";
 import SettingsInstructions from "./SettingsInstructions";
 import Specialties from "./Specialties";
+import SettingsTable from "./SettingsTable";
 
 const SettingsTitle = (props) => {
   const specialty = (
@@ -57,6 +58,16 @@ const SettingsTitle = (props) => {
         />
       </div>
       {specialty}
+      <div
+        className={
+          "settings-table-component-div " +
+          (props.currentSpecialty[0] && props.currentSpecialty[0].clicked
+            ? "settings"
+            : null)
+        }
+      >
+        <SettingsTable />
+      </div>
     </div>
   );
 };

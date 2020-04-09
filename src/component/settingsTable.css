@@ -1,0 +1,11 @@
+.settings-table-component-div {
+  display: none;
+}
+
+.settings-table-component-div.settings {
+  display: inline-block;
+  margin: 50px 0px 0px 40px;
+  height: auto;
+  width: 100%;
+  background-color: aquamarine;
+}
