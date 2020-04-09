@@ -3,7 +3,7 @@
   top: 80px;
   left: 0px;
   width: 80px;
-  height: 620px;
+  height: 700px;
 
   /* UI Properties */
 
@@ -15,7 +15,7 @@
   position: absolute;
   border-radius: 50%;
   top: 100px;
-  left: 15px;
+  left: 12px;
   width: 50px;
   height: 50px;
 
@@ -38,8 +38,8 @@
 
 .printer-icon {
   position: relative;
-  top: 105px;
-  left: 28px;
+  top: 185px;
+  left: 25px;
   width: 24px;
   height: 24px;
 
