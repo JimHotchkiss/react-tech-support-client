@@ -40,7 +40,7 @@ const SettingsInstructions = (props) => {
         {props.currentCamera[0] &&
         props.currentCamera[0].open === false &&
         props.currentDisplay[0] &&
-        props.currentDisplay[0].clicked == false &&
+        props.currentDisplay[0].clicked === false &&
         props.currentSpecialty[0] &&
         props.currentSpecialty[0].clicked
           ? cameraDisplayInstructions
@@ -49,7 +49,7 @@ const SettingsInstructions = (props) => {
             props.currentDisplay[0] &&
             props.currentDisplay[0].clicked &&
             props.currentSpecialty[0] &&
-            props.currentSpecialty[0].clicked == false
+            props.currentSpecialty[0].clicked === false
           ? cameraSpecialtyInstructions
           : props.currentCamera[0] &&
             props.currentCamera[0].open === false &&
