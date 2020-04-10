@@ -8,10 +8,10 @@ const SettingsTable = (props) => {
         <thread>
           <tr className="camera-banner">
             <th className="camera-title">
-              CCU <p>1688</p>
+              CCU <p className="camera-text">1688</p>
             </th>
             <th className="specialty-title">
-              Specialty<p>Lap 1</p>
+              SPECIALTY<p className="specialty-text">Lap 1</p>
             </th>
           </tr>
         </thread>
@@ -65,9 +65,13 @@ const SettingsTable = (props) => {
 
       <table className="display-table">
         <thread>
-          <tr>
-            <th>Display</th>
-            <th>Specialty</th>
+          <tr className="display-banner">
+            <th className="display-title">
+              DISPLAY <p className="display-text">VisionPro</p>
+            </th>
+            <th className="specialty-title">
+              SPECIALTY<p className="specialty-text">Lap 1</p>
+            </th>
           </tr>
         </thread>
         <tbody>
