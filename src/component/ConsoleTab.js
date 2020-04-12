@@ -4,7 +4,6 @@ import ConsoleCategory from "./ConsoleCategory";
 import Consoles from "./Consoles";
 
 const ConsoleTab = (props) => {
-  console.log("camera", props.currentCamera, "display", props.currentDisplay);
   return (
     <div className="console-tab-div">
       <div className="console-wrapper">
