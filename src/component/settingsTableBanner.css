@@ -1,6 +1,19 @@
 .settings-table-banner {
+  display: flex;
   height: 80px;
-  width: 1600px;
+  width: 75vw;
   background: #eaeef2 0% 0% no-repeat padding-box;
   opacity: 1;
+}
+
+.camera-banner-div {
+  height: 100%;
+  width: 100%;
+  background: #eaeef2 0% 0% no-repeat padding-box;
+}
+
+.monitor-banner-div {
+  height: 100%;
+  width: 100%;
+  background: #eaeef2 0% 0% no-repeat padding-box;
 }

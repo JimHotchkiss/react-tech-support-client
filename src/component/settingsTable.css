@@ -1,93 +1,17 @@
-.settings-table-component-div {
-  display: none;
-}
 
-.settings-table-component-div.settings {
-  display: inline-block;
-  margin-top: 10px;
-}
 
-.tables-div {
-  display: flex;
-}
 
-.camera-table {
-  border-collapse: collapse;
-  background-color: darkgrey;
-}
 
-.display-table {
-  border-collapse: collapse;
-  background-color: darkgrey;
-}
 
-.camera-banner {
-  height: 80px;
-  width: 100%;
-  background-color: #eaeef2;
-}
 
-.display-banner {
-  height: 80px;
-  width: 300px;
-  background-color: #eaeef2;
-}
 
-.camera-title {
-  font-family: Roboto;
-  font-size: 24px;
-  padding: 37px 12px 19px 40px;
-}
 
-.dispaly-title {
-  font-family: Roboto;
-  font-size: 24px;
-  padding: 37px 12px 19px 40px;
-}
 
-.display-title p {
-  display: inline;
-  text-align: left;
-  font-family: Roboto;
-  font-size: 16px;
-  font-weight: 100;
-  letter-spacing: 0px;
-  color: #707070;
-  opacity: 1;
-}
 
-.specialty-title {
-  font-family: Roboto;
-  font-size: 24px;
-  padding: 37px 12px 19px 40px;
-}
 
-.specialty-text {
-  margin-left: 12px;
-}
 
-.camera-title p {
-  display: inline;
-  text-align: left;
-  font-family: Roboto;
-  font-size: 16px;
-  font-weight: 100;
-  letter-spacing: 0px;
-  color: #707070;
-  opacity: 1;
-}
 
-.specialty-title p {
-  display: inline;
-  text-align: left;
-  font-family: Roboto;
-  font-size: 16px;
-  font-weight: 100;
-  letter-spacing: 0px;
-  color: #707070;
-  opacity: 1;
-}
 
-.display-table {
-  background-color: darkgray;
-}
+
+
+

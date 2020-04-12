@@ -56,3 +56,12 @@
   padding-top: 3px;
   color: #b2b4ae;
 }
+
+.settings-table-component-div {
+  display: none;
+}
+
+.settings-table-component-div.settings {
+  display: inline-block;
+  margin-top: 10px;
+}
