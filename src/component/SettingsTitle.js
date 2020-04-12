@@ -66,7 +66,11 @@ const SettingsTitle = (props) => {
             : null)
         }
       >
-        <SettingsTable />
+        <SettingsTable
+          currentCamera={props.currentCamera}
+          currentDisplay={props.currentDisplay}
+          currentSpecialty={props.currentSpecialty}
+        />
       </div>
     </div>
   );

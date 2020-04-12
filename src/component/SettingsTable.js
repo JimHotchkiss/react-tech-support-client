@@ -4,7 +4,11 @@ import SettingsTableBanner from "./SettingsTableBanner";
 const SettingsTable = (props) => {
   return (
     <div className="tables-div">
-      <SettingsTableBanner />
+      <SettingsTableBanner
+        currentCamera={props.currentCamera}
+        currentDisplay={props.currentDisplay}
+        currentSpecialty={props.currentSpecialty}
+      />
     </div>
   );
 };

@@ -1,3 +1,6 @@
+.camera-banner-wrapper {
+  display: flex;
+}
 .camera-banner-title {
   position: relative;
   left: 40px;
@@ -7,6 +10,21 @@
   color: #414141;
 }
 .camera-banner-title p {
+  font-size: 19px;
+  color: #707070;
+  display: inline-block;
+}
+
+.specialty-banner-title {
+  position: relative;
+  left: 180px;
+  top: 37px;
+  font-family: Roboto;
+  font-size: 24px;
+  color: #414141;
+}
+
+.specialty-banner-title p {
   font-size: 19px;
   color: #707070;
   display: inline-block;
