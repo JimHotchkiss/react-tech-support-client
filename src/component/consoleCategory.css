@@ -15,6 +15,23 @@
   margin: 0px;
 }
 
+/* 1600px Screen Size*/
+@media only screen and (max-width: 1600px) {
+  .console-category-div h1 {
+    font-family: Roboto;
+    font-size: 19px;
+    font-weight: 900;
+  }
+
+  .console-category-div {
+    text-align: left;
+    padding: 35px 0px 10px 20px;
+    letter-spacing: 0;
+    color: #414141;
+    opacity: 1;
+  }
+}
+
 @media only screen and (max-width: 360px) {
   .menu-icon-div {
     position: absolute;

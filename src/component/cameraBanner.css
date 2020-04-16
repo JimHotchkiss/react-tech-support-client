@@ -29,3 +29,12 @@
   color: #707070;
   display: inline-block;
 }
+
+/* 1600px Screen Size*/
+@media only screen and (max-width: 1600px) {
+  .camera-banner-title p {
+    font-size: 90px;
+    color: #707070;
+    display: inline-block;
+  }
+}

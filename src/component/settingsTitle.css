@@ -65,3 +65,30 @@
   display: inline-block;
   margin-top: 10px;
 }
+
+/* Screen 1600px */
+
+@media only screen and (max-width: 1600px) {
+ .settings-title-div h3 {
+  font-family: Roboto;
+  margin: 0px 0px 25px 0px;
+  font-size: 23px;
+  /* padding-left: 33px; */
+  color: #000000;
+ }
+
+ .settings-info-icon-div {
+  margin-right: 5px;
+  background: transparent url("icon/icon-info.svg") 0% 0% no-repeat padding-box;
+  opacity: 1;
+ }
+ .info-div {
+  display: flex;
+  /* padding: 0px 0px 0px 33px; */
+ }
+
+ .info-p-tag {
+   font-size: 13px;
+  
+}
+}

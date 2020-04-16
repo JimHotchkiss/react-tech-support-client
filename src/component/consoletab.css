@@ -17,6 +17,20 @@
   flex-direction: column;
 }
 
+/* 1600px Screen Size*/
+@media only screen and (max-width: 1600px) {
+  .console-tab-div {
+    top: 67px;
+    left: 64px;
+    width: 200px;
+    height: 92vh;
+  
+    background: #f7f7f7 0% 0% no-repeat padding-box;
+  
+    opacity: 1;
+  }
+}
+
 @media only screen and (max-width: 360px) {
   .console-tab-div {
     position: absolute;

@@ -45,3 +45,33 @@
   color: #ffffff;
   transition: all 0.2s ease-in-out;
 }
+
+/* 1600px Screen Size*/
+@media only screen and (max-width: 1600px) {
+  .display-title {
+    font-family: Roboto;
+    font-size: 17px;
+    letter-spacing: 0;
+    color: #414141;
+    opacity: 1;
+  }
+
+  .monitor-button {
+    position: relative;
+    left: 0px;
+    align-items: center;
+    height: 35px;
+
+    width: 93%;
+    margin: 0px 0px 8px 10px;
+    background: #eaeaea 0% 0% no-repeat padding-box;
+    border-radius: 8px;
+    opacity: 1;
+  }
+
+  .monitor-button p {
+    font-size: 13px;
+    margin-left: 16px  ;
+  }
+
+}

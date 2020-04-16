@@ -65,6 +65,21 @@
   opacity: 1;
 }
 
+/* 1600px Screen Size*/
+@media only screen and (max-width: 1600px) {
+  .arrow-div {
+    padding: 0px 0px 0px 20px;
+  }
+
+  .console-li-div a {
+    text-decoration: none;
+    font-family: Roboto;
+    font-size: 13px;
+    color: #707070;
+  }
+
+}
+
 @media only screen and (max-width: 360px) {
   .console-li-div {
     padding: 0px 0px 0px 20px;
