@@ -1,14 +1,14 @@
 .settings-table-banner {
   display: flex;
-  height: 77px;
-  width: 75vw;
+  height: 80px;
+  width: 1150px;
   background: #eaeef2 0% 0% no-repeat padding-box;
   opacity: 1;
 }
 
 .camera-banner-div {
   height: 100%;
-  width: 90%;
+  width: 100%;
   background: #eaeef2 0% 0% no-repeat padding-box;
   border-right: 1px dashed #707070;
 }
