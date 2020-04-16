@@ -33,8 +33,38 @@
 /* 1600px Screen Size*/
 @media only screen and (max-width: 1600px) {
   .camera-banner-title p {
-    font-size: 90px;
+    font-size: 15px;
+    font-weight: lighter;
     color: #707070;
     display: inline-block;
+    padding-left: 10px;
+  }
+
+  .camera-banner-title {
+    position: relative;
+    left: 40px;
+    top: 25px;
+    font-family: Roboto;
+    font-size: 19px;
+    font-weight: bold;
+    color: #414141;
+  }
+
+  .specialty-banner-title {
+    position: relative;
+    left: 275px;
+    top: 25px;
+    font-family: Roboto;
+    font-weight: bold;
+    font-size: 19px;
+    color: #414141;
+  }
+  
+  .specialty-banner-title p {
+    font-size: 15px;
+    font-weight: lighter;
+    color: #707070;
+    display: inline-block;
+    padding-left: 10px;
   }
 }

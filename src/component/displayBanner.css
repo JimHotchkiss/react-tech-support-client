@@ -32,3 +32,41 @@
   color: #707070;
   display: inline-block;
 }
+
+@media only screen and (max-width: 1600px) {
+  .monitor-banner-title {
+    position: relative;
+    top: 25px;
+    left: 40px;
+    font-family: Roboto;
+    font-size: 19px;
+    font-weight: bold;
+    color: #414141;
+  }
+  
+  .monitor-banner-title p {
+    font-size: 15px;
+    font-weight: lighter;
+    color: #707070;
+    display: inline-block;
+    padding-left: 10px;
+  }
+
+  .specialty-monitor-banner-title {
+    position: relative;
+    left: 320px;
+    top: 0px;
+    font-family: Roboto;
+    font-size: 19px;
+    font-weight: bold;
+    color: #414141;
+  }
+  
+  .specialty-monitor-banner-title p {
+    font-size: 15px;
+    font-weight: lighter;
+    color: #707070;
+    display: inline-block;
+    padding-left: 10px;
+  }
+}

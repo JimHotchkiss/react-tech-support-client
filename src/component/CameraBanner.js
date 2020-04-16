@@ -5,7 +5,7 @@ const CameraBanner = (props) => {
   return (
     <div className="camera-banner-wrapper">
       <div className="camera-banner-title">
-        CCU:{" "}
+        CCU{" "}
         <p className="camera-banner-text">
           {props.currentCamera[0] && props.currentCamera[0].open
             ? props.currentCamera[0].name
@@ -13,7 +13,7 @@ const CameraBanner = (props) => {
         </p>
       </div>
       <div className="specialty-banner-title">
-        SPECIALTY:{" "}
+        SPECIALTY{" "}
         <p className="specialty-banner-text">
           {props.currentSpecialty[0] ? props.currentSpecialty[0].name : null}
         </p>

@@ -69,11 +69,16 @@
 /* Screen 1600px */
 
 @media only screen and (max-width: 1600px) {
+
+  .specialty-div.settings {
+    width: 1000px;
+    display: inline-block;
+    margin-right: 50px;
+  }
  .settings-title-div h3 {
   font-family: Roboto;
   margin: 0px 0px 25px 0px;
   font-size: 23px;
-  /* padding-left: 33px; */
   color: #000000;
  }
 
@@ -84,7 +89,6 @@
  }
  .info-div {
   display: flex;
-  /* padding: 0px 0px 0px 33px; */
  }
 
  .info-p-tag {
