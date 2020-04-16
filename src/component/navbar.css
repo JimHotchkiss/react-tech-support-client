@@ -46,6 +46,49 @@
   background: transparent url("icon/icon-print.svg") 0% 0% no-repeat padding-box;
 }
 
+/* 1600px Screen Size*/
+@media only screen and (max-width: 1600px) {
+  .navbar-div {
+    top: 64px;
+    left: 0px;
+    width: 64px;
+    height: 100vh;
+  
+    /* UI Properties */
+  
+    background: #414141 0% 0% no-repeat padding-box;
+    opacity: 1;
+  }
+  .round-div {
+    position: relative;
+    border-radius: 50%;
+    top: 100px;
+    left: 10px;
+    width: 40px;
+    height: 40px;
+  
+    background: #2b72cc 0% 0% no-repeat padding-box;
+  
+    opacity: 1;
+  }
+  .home-icon {
+    top: 8px;
+    left: 9px;
+  
+    background: transparent url("icon/icon-home.svg") 0% 0% no-repeat padding-box;
+  
+    opacity: 1;
+  }
+  .printer-icon {
+    top: 133px;
+    left: 18px;
+  
+    background: transparent url("icon/icon-print.svg") 0% 0% no-repeat padding-box;
+  }
+
+}
+
+/* Mobile Devices*/
 @media only screen and (max-width: 360px) {
   .navbar-div {
     /* Layout Properties*/

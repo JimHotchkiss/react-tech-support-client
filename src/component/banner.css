@@ -38,6 +38,47 @@
   opacity: 1;
 }
 
+/* 1600px Wide Screens */
+@media only screen and (max-width: 1600px) {
+  .banner-div {
+      position: fixed;
+      overflow: hidden;
+      z-index: 99;
+      margin-top: 0px;
+      left: 0px;
+      width: 1600px;
+      height: 64px;
+
+    /* UI Properties */
+    background: #fff 0% 0% no-repeat padding-box;
+    box-shadow: 0px 1px 5px #0000001a;
+    opacity: 1;
+  }
+  .img-div {
+    position: absolute;
+    top: 18px; /* Unable to size logo */
+    left: 27px;
+    width: 200px;
+    height: 30px;
+
+    background: transparent url("img/logo-stryker.svg") 0% 0% no-repeat
+      padding-box;
+
+    opacity: 1;
+  }
+  .info-icon-div {
+    position: absolute;
+    top: 22px;
+    right: 200px;
+    width: 24px;
+    height: 24px;
+  
+    background: transparent url("icon/icon-info.svg") 0% 0% no-repeat padding-box;
+  
+    opacity: 1;
+  }
+}
+
 @media only screen and (max-width: 360px) {
   .banner-div {
     margin-top: 0px;
