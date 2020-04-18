@@ -1,9 +1,9 @@
 .console-tab-div {
   position: absolute;
-  top: 83px;
-  left: 80px;
-  width: 240px;
-  min-height: 620px;
+  top: 70px;
+  left: 67px;
+  width: 200px;
+  min-height: 731px;
   height: auto;
 
   background: #f7f7f7 0% 0% no-repeat padding-box;
@@ -12,7 +12,6 @@
 }
 
 .console-wrapper {
-  position: relative;
   display: flex;
   flex-direction: column;
 }

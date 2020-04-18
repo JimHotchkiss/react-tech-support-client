@@ -4,7 +4,8 @@
 
 .display-title {
   font-family: Roboto;
-  font-size: 21px;
+  font-size: 20px;
+  font-weight: bolder;
   letter-spacing: 0;
   color: #414141;
   opacity: 1;
@@ -14,10 +15,10 @@
   position: relative;
   left: 0px;
   align-items: center;
-  height: 40px;
+  height: 32px;
   width: 93%;
-  padding-top: 10px;
-  margin: 10px 0px 10px 10px;
+  padding-top: 8px;
+  margin: 8px 0px 0px 10px;
   background: #eaeaea 0% 0% no-repeat padding-box;
   border-radius: 8px;
   opacity: 1;
@@ -31,6 +32,8 @@
 }
 
 .monitor-button p {
+  font-family: Roboto;
+  font-size: 14px;
   color: #707070;
   margin-left: 25px;
 }

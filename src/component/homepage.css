@@ -1,0 +1,4 @@
+.navbar-console-div {
+    display: flex;
+    flex-direction: row;
+}

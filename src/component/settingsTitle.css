@@ -1,6 +1,6 @@
 .specialty-component-div {
   position: relative;
-  left: 40px;
+  left: 2px;
 }
 
 .specialty-div {
@@ -9,14 +9,11 @@
 
 .specialty-div.settings {
   display: inline-block;
-  margin-right: 100px;
 }
 
 .settings-title-div {
   position: absolute;
-  top: 40px;
-  margin: 0;
-  padding: 0;
+  top: 32px;
 }
 
 .settings-title-div.settings h3 {
@@ -26,14 +23,14 @@
 .settings-title-div h3 {
   font-family: Roboto;
   margin: 0px 0px 35px 0px;
-  font-size: 28px;
-  padding-left: 40px;
+  font-size: 24px;
+  padding-left: 2px;
   color: #000000;
 }
 
 .info-div {
   display: flex;
-  padding: 0px 0px 0px 40px;
+  padding: 0px 0px 0px 0px;
 }
 
 .info-div.settings {
@@ -43,7 +40,7 @@
   position: relative;
   top: 0px;
   margin-bottom: 40px;
-  margin-right: 12px;
+  margin-right: 8px;
   width: 24px;
   height: 24px;
 
@@ -53,6 +50,7 @@
 }
 
 .info-p-tag {
-  padding-top: 3px;
+  font-size: 15px;
+  padding-top: 2px;
   color: #b2b4ae;
 }

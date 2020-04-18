@@ -4,7 +4,7 @@ import "./consoleCategory.css";
 const ConsoleCategory = () => {
   return (
     <div className="console-category-div">
-      <h1>CCU</h1>
+      <h3>CCU</h3>
       <a href="#">
         <div className="menu-icon-div"></div>
       </a>
