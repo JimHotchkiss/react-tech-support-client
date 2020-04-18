@@ -1,9 +1,9 @@
 .navbar-div {
   /* Layout Properties*/
-  top: 80px;
+  top: 67px;
   left: 0px;
-  width: 80px;
-  height: 620px;
+  width: 67px;
+  height: 731px;
 
   /* UI Properties */
 
@@ -15,9 +15,9 @@
   position: absolute;
   border-radius: 50%;
   top: 100px;
-  left: 15px;
-  width: 50px;
-  height: 50px;
+  left: 11px;
+  width: 41px;
+  height: 41px;
 
   background: #2b72cc 0% 0% no-repeat padding-box;
 
@@ -26,8 +26,8 @@
 
 .home-icon {
   position: relative;
-  top: 12px;
-  left: 14px;
+  top: 8px;
+  left: 9px;
   width: 24px;
   height: 24px;
 
@@ -37,9 +37,9 @@
 }
 
 .printer-icon {
-  position: relative;
-  top: 105px;
-  left: 28px;
+  position: absolute;
+  top: 182px;
+  left: 19px;
   width: 24px;
   height: 24px;
 
