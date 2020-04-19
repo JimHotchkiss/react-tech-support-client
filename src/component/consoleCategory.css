@@ -1,6 +1,6 @@
-.console-category-div p {
+.console-category-div h1 {
   font-family: Roboto;
-  font-size: 18px;
+  font-size: 16px;
   font-weight: 900;
   text-align: left;
   font: Black 21px/24px Roboto;
@@ -9,5 +9,5 @@
 }
 
 .console-category-div {
-  margin: 17px 0px 20px 14px;
+  margin: 17px 0px 18px 14px;
 }
