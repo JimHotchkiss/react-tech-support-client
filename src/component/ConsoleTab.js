@@ -1,21 +1,18 @@
 import React from "react";
 import ConsoleCategory from "./ConsoleCategory";
 import Consoles from "./Consoles";
+import "./consoleTab.css";
 
 const ConsoleTab = (props) => {
-  console.log("camera", props.currentCamera, "display", props.currentDisplay);
   return (
-    <div className="console-tab-div">
-      <div className="console-wrapper">
-        <ConsoleCategory />
-        <Consoles
-          consoles={props.consoles}
-          handleCamera={props.handleCamera}
-          handleDisplay={props.handleDisplay}
-          cameras={props.cameras}
-          monitors={props.monitors}
-        />
-      </div>
+    <div className='console-wrapper'>
+      <ConsoleCategory />
+      <Consoles
+        handleCamera={props.handleCamera}
+        handleDisplay={props.handleDisplay}
+        cameras={props.cameras}
+        monitors={props.monitors}
+      />
     </div>
   );
 };

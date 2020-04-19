@@ -1,14 +1,15 @@
 import React from "react";
 import Displays from "./Displays";
 import Arrow from "./Arrow";
+import "./cameras.css";
 const Cameras = (props) => {
   const cameraList = props.cameras.map((camera, index) => {
     return (
-      <div className="camera-outside-div" key={index}>
+      <div className='camera-outside-div' key={index}>
         <div index={index} onClick={props.handleCamera.bind(this, index)}>
-          <div className="li-icon-div">
-            <div className="console-li-div">
-              <li className="console-li-element">
+          <div className='li-icon-div'>
+            <div className='console-li-div'>
+              <li className='console-li-element'>
                 <a index={index}>{camera.name}</a>
               </li>
             </div>
@@ -25,8 +26,8 @@ const Cameras = (props) => {
     );
   });
   return (
-    <div className="console-row-div">
-      <ul className="console-row-ul">{cameraList}</ul>
+    <div className='console-row-div'>
+      <ul className='console-row-ul'>{cameraList}</ul>
     </div>
   );
 };

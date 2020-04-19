@@ -1,5 +1,6 @@
 import React from "react";
 import Cameras from "./Cameras";
+import Displays from "./Displays";
 
 const Consoles = (props) => {
   return (
