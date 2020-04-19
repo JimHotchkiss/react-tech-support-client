@@ -1,5 +1,4 @@
 import React from "react";
-import "./consoletab.css";
 import ConsoleCategory from "./ConsoleCategory";
 import Consoles from "./Consoles";
 

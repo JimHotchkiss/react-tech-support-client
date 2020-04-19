@@ -1,5 +1,4 @@
 import React from "react";
-import "./consoleCategory.css";
 
 const ConsoleCategory = () => {
   return (

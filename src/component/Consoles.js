@@ -1,5 +1,4 @@
 import React from "react";
-import "./consoles.css";
 import Cameras from "./Cameras";
 
 const Consoles = (props) => {

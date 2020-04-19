@@ -173,26 +173,34 @@ const HomePage = () => {
   };
   return (
     <div className="home-page-div">
-      <Banner />
-      <div className="navbar-console-div">
-        <NavBar />
-        <ConsoleTab
-          cameras={cameras}
+      <div className="banner-comp-div">
+        <Banner />
+      </div>
+      <div className="navbar-console-settings-div">
+        <div className="navbar-div">
+          <NavBar />
+        </div>
+        <div className="console-tab-div">
+          <ConsoleTab
+            cameras={cameras}
+            monitors={monitors}
+            currentCamera={currentCamera}
+            currentDisplay={currentDisplay}
+            handleCamera={handleCamera}
+            handleDisplay={handleDisplay}
+          />
+        </div>
+        <div className="settings-div">
+          <SettingsWindow
+          handleSpecialty={handleSpecialty}
+          specialties={specialties}
+          currentSpecialty={currentSpecialty}
           monitors={monitors}
           currentCamera={currentCamera}
           currentDisplay={currentDisplay}
-          handleCamera={handleCamera}
-          handleDisplay={handleDisplay}
         />
+        </div>
       </div>
-      <SettingsWindow
-        handleSpecialty={handleSpecialty}
-        specialties={specialties}
-        currentSpecialty={currentSpecialty}
-        monitors={monitors}
-        currentCamera={currentCamera}
-        currentDisplay={currentDisplay}
-      />
     </div>
   );
 };

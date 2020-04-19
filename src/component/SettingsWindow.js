@@ -1,7 +1,5 @@
 import React from "react";
-import "./settingsWindow.css";
 import SettingsTitle from "./SettingsTitle";
-import "./settingsTitle.css";
 
 const SettingsWindow = (props) => {
   return (

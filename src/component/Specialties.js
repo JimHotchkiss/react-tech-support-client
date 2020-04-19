@@ -1,5 +1,4 @@
 import React from "react";
-import "./specialties.css";
 
 const Specialties = (props) => {
   const specialtiesList = props.specialties.map((specialty, index) => {

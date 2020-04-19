@@ -1,10 +1,5 @@
 import React from "react";
 const SettingsInstructions = (props) => {
-  console.log(
-    props.currentCamera,
-    props.currentDisplay,
-    props.currentSpecialty
-  );
   const cameraMonitorSpecialtyInstructions = (
     <p className="info-p-tag">
       Select a CCU, Monitor and Specialty to show settings.
