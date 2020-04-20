@@ -1,13 +1,55 @@
 .show-display {
-  display: none;
-  margin-top: 8px;
-  margin-bottom: 8px;
-  padding-left: 8px;
+  max-height: 0;
+  overflow-y: hidden;
+  transition: all 0.4s ease-in-out;
 }
 
 .show-display.open {
-  display: inline;
-  margin-top: 8px;
-  margin-bottom: 8px;
-  padding-left: 8px;
+  max-height: 1000px;
+}
+
+.show-display h3 {
+  font-family: Roboto;
+  font-size: 13px;
+  font-weight: bold;
+  color: #4c5468;
+  padding-left: 14px;
+  margin-top: 13px;
+  margin-bottom: 3px;
+}
+
+.monitor-button {
+  height: 32px;
+  width: 86%;
+  margin: 6px 0px 0px 12px;
+  background: #eaeaea 0% 0% no-repeat padding-box;
+  border-radius: 6px;
+  opacity: 1;
+}
+
+.monitor-button:hover {
+  cursor: pointer;
+  background: #2b72cc 0% 0% no-repeat padding-box;
+  transition: all 0.4s ease-in-out;
+}
+
+.monitor-button.clicked {
+  background: #2b72cc 0% 0% no-repeat padding-box;
+}
+
+.monitor-button p {
+  font-family: Roboto;
+  font-size: 12px;
+  padding-top: 10px;
+  padding-left: 18px;
+  color: #707070;
+}
+
+.monitor-button p:hover {
+  color: #ffffff;
+  transition: all 0.2s ease-in-out;
+}
+
+.monitor-button.clicked p {
+  color: #ffffff;
 }
