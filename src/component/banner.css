@@ -1,24 +1,22 @@
 .banner-div {
-    display: flex; 
-
-
+  display: flex;
 }
 
 .banner-img-div {
-    width: 120px;
-    height: 30px;
-    margin-top: 23px;
-    margin-left: 33px;
-    background: transparent url('img/logo-stryker.svg') 0% 0% no-repeat padding-box;
-    background-size: 90px;
+  width: 120px;
+  height: 30px;
+  margin-top: 23px;
+  margin-left: 33px;
+  background: transparent url("img/logo-stryker.svg") 0% 0% no-repeat
+    padding-box;
+  background-size: 90px;
 }
 
 .banner-info-icon-div {
-    margin-top: 20px;
-    margin-left: 86%;
-    width: 24px;
-    height: 24px;
-    background: transparent url('icon/icon-info.svg') 0% 0% no-repeat padding-box;
-    background-size: 20px;
-
+  margin-top: 20px;
+  margin-left: 86%;
+  width: 24px;
+  height: 24px;
+  background: transparent url("icon/icon-info.svg") 0% 0% no-repeat padding-box;
+  background-size: 20px;
 }

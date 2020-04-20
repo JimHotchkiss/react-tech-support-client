@@ -1,11 +1,9 @@
 .console-li-element {
   list-style-type: none;
-  background-color: slategrey;
   padding-top: 5px;
   padding-left: 14px;
 }
 
 .li-icon-div {
   display: flex;
-  background-color: skyblue;
 }

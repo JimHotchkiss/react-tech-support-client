@@ -1,9 +1,21 @@
-.arrow-outer-div {
-  width: 20px;
+.arrow-outer-div .arrow-div::after {
+  content: "";
+  margin: 12px 0px 0px 0px;
+  position: absolute;
   height: 20px;
-  margin-top: 5px;
-  padding-top: 9px;
-  background: red url("icon/expand-icon1.png") 0% 0% no-repeat padding-box;
-  background-size: 17px;
-  opacity: 1;
+  width: 20px;
+  transform: translateY(-50%);
+  background: transparent url("icon/show-less-icon1.png") 0% 0% no-repeat
+    padding-box;
+  background-size: 20px;
+
+  transition: all 0.4s ease-out;
+}
+
+.arrow-outer-div.open .arrow-div::after {
+  transform: translateY(-50%) rotate(-180deg);
+}
+
+.arrow-div {
+  padding: 0px 0px 0px 26px;
 }
