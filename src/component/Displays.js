@@ -6,7 +6,7 @@ const Displays = (props) => {
     return (
       <div
         key={monitor.name}
-        className={"show-display " + (props.camera.open ? "open" : "")}>
+        className={"show-display " + (props.camera.clicked ? "open" : "")}>
         <div
           index={index}
           onClick={props.handleDisplay.bind(this, index)}
@@ -20,7 +20,7 @@ const Displays = (props) => {
   return (
     <div
       className='display-div'
-      className={"show-display " + (props.camera.open ? "open" : "")}>
+      className={"show-display " + (props.camera.clicked ? "open" : "")}>
       <h3 className='display-title'>Display</h3>
       <div className='display-button-div'>{displayList}</div>
     </div>

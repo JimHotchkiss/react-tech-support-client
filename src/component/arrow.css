@@ -15,7 +15,3 @@
 .arrow-outer-div.open .arrow-div::after {
   transform: translateY(-50%) rotate(-180deg);
 }
-
-.arrow-div {
-  left: 90%;
-}

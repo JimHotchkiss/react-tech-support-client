@@ -11,27 +11,27 @@ const HomePage = () => {
   const [cameras, setCameras] = useState([
     {
       name: "1688",
-      open: false,
+      clicked: false,
     },
     {
       name: "1588",
-      open: false,
+      clicked: false,
     },
     {
       name: "Precision",
-      open: false,
+      clicked: false,
     },
     {
       name: "1488",
-      open: false,
+      clicked: false,
     },
     {
       name: "1288",
-      open: false,
+      clicked: false,
     },
     {
       name: "1188",
-      open: false,
+      clicked: false,
     },
   ]);
 
@@ -134,9 +134,9 @@ const HomePage = () => {
     setCameras(
       cameras.map((camera, i) => {
         if (i === index) {
-          camera.open = !camera.open;
+          camera.clicked = !camera.clicked;
         } else {
-          camera.open = false;
+          camera.clicked = false;
         }
         return camera;
       })
@@ -172,15 +172,15 @@ const HomePage = () => {
     setCurrentSpecialty(results);
   };
   return (
-    <div className="home-page-div">
-      <div className="banner-comp-div">
+    <div className='home-page-div'>
+      <div className='banner-comp-div'>
         <Banner />
       </div>
-      <div className="navbar-console-settings-div">
-        <div className="navbar-div">
+      <div className='navbar-console-settings-div'>
+        <div className='navbar-div'>
           <NavBar />
         </div>
-        <div className="console-tab-div">
+        <div className='console-tab-div'>
           <ConsoleTab
             cameras={cameras}
             monitors={monitors}
@@ -190,15 +190,15 @@ const HomePage = () => {
             handleDisplay={handleDisplay}
           />
         </div>
-        <div className="settings-div">
+        <div className='settings-div'>
           <SettingsWindow
-          handleSpecialty={handleSpecialty}
-          specialties={specialties}
-          currentSpecialty={currentSpecialty}
-          monitors={monitors}
-          currentCamera={currentCamera}
-          currentDisplay={currentDisplay}
-        />
+            handleSpecialty={handleSpecialty}
+            specialties={specialties}
+            currentSpecialty={currentSpecialty}
+            monitors={monitors}
+            currentCamera={currentCamera}
+            currentDisplay={currentDisplay}
+          />
         </div>
       </div>
     </div>

@@ -4,3 +4,10 @@
   margin-bottom: 8px;
   padding-left: 8px;
 }
+
+.show-display.open {
+  display: inline;
+  margin-top: 8px;
+  margin-bottom: 8px;
+  padding-left: 8px;
+}
