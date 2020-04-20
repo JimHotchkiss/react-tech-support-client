@@ -1,9 +1,10 @@
 import React from "react";
 import SettingsTitle from "./SettingsTitle";
+import "./settingsWindow.css";
 
 const SettingsWindow = (props) => {
   return (
-    <div className="settings-window-div">
+    <div className='settings-window-div'>
       <SettingsTitle
         handleSpecialty={props.handleSpecialty}
         specialties={props.specialties}

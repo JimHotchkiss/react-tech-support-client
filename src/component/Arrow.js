@@ -1,10 +1,11 @@
 import React from "react";
+import "./arrow.css";
 
-const Arrow = props => {
+const Arrow = (props) => {
   return (
-    <a href="#">
+    <a href='#'>
       <div className={"arrow-outer-div " + (props.camera.open ? "open" : "")}>
-        <div className="arrow-div"></div>
+        <div className='arrow-div'></div>
       </div>
     </a>
   );
