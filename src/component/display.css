@@ -1,4 +1,5 @@
 .show-display {
+  display: none;
   margin-top: 8px;
   margin-bottom: 8px;
   padding-left: 8px;
