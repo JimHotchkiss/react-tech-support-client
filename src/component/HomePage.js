@@ -44,10 +44,6 @@ const HomePage = () => {
       name: "VisionPro",
       clicked: false,
     },
-    {
-      name: "HDTV Wise",
-      clicked: false,
-    },
   ]);
 
   // Specialty Hook

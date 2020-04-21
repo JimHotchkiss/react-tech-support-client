@@ -1,12 +1,11 @@
 .console-li-element {
   list-style-type: none;
-  padding-top: 5px;
-  padding-left: 14px;
+  padding-top: 13px;
+  padding-left: 15px;
 }
 
 .li-icon-div {
   display: flex;
-  padding-top: 8px;
   padding-bottom: 10px;
   content: ""; /* This is necessary for the pseudo element to work. */
   width: 92%; /* Change this to whatever width you want. */
