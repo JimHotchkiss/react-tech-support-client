@@ -1,7 +1,7 @@
 .show-display {
   max-height: 0;
   overflow-y: hidden;
-  transition: all 0.4s ease-in-out;
+  transition: all 0.3s ease-in-out;
 }
 
 .show-display.open {
@@ -33,7 +33,7 @@
 .monitor-button:hover {
   cursor: pointer;
   background: #2b72cc 0% 0% no-repeat padding-box;
-  transition: all 0.4s ease-in-out;
+  transition: all 0.3s ease-in-out;
 }
 
 .monitor-button.clicked {
@@ -51,7 +51,7 @@
 
 .monitor-button p:hover {
   color: #ffffff;
-  transition: all 0.2s ease-in-out;
+  transition: all 0.3s ease-in-out;
 }
 
 .monitor-button.clicked p {

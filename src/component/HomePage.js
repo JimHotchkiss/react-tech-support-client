@@ -173,7 +173,7 @@ const HomePage = () => {
         <Banner />
       </div>
       <div className='navbar-console-settings-div'>
-        <div className='navbar-div'>
+        <div className='navbar-component-div'>
           <NavBar />
         </div>
         <div className='console-tab-div'>
