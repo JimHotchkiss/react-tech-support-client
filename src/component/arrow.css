@@ -15,3 +15,22 @@
 .arrow-outer-div.open .arrow-div::after {
   transform: translateY(-50%) rotate(-180deg);
 }
+
+/* Mid-size Screens 1200px*/
+@media only screen and (max-width: 1200px) {
+  .arrow-outer-div .arrow-div::after {
+    left: 200px;
+  }
+}
+
+@media only screen and (max-width: 1000px) {
+  .arrow-outer-div .arrow-div::after {
+    left: 185px;
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  .arrow-outer-div .arrow-div::after {
+    left: 175px;
+  }
+}
