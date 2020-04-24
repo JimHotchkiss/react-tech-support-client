@@ -1,6 +1,7 @@
 import React from "react";
 import SettingsInstructions from "./SettingsInstructions";
 import Specialties from "./Specialties";
+import "./settingsTitle.css";
 
 const SettingsTitle = (props) => {
   const specialty = (
@@ -15,8 +16,7 @@ const SettingsTitle = (props) => {
           : props.currentDisplay[0] && props.currentDisplay[0].clicked
           ? "settings"
           : null)
-      }
-    >
+      }>
       <Specialties
         handleSpecialty={props.handleSpecialty}
         specialties={props.specialties}
@@ -31,9 +31,10 @@ const SettingsTitle = (props) => {
         (props.currentSpecialty[0] && props.currentSpecialty[0].clicked
           ? "settings"
           : null)
-      }
-    >
-      <h3>Money Settings</h3>
+      }>
+      <div className='settings-title-h3-div'>
+        <h3>Money Settings</h3>
+      </div>
       <div
         className={
           "info-div " +
@@ -47,9 +48,8 @@ const SettingsTitle = (props) => {
             : props.currentSpecialty[0] && props.currentSpecialty[0].clicked
             ? "settings"
             : null)
-        }
-      >
-        <div className="settings-info-icon-div"></div>
+        }>
+        <div className='settings-info-icon-div'></div>
         <SettingsInstructions
           currentCamera={props.currentCamera}
           currentDisplay={props.currentDisplay}
