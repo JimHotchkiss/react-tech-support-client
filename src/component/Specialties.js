@@ -2,7 +2,7 @@ import React from "react";
 import "./specialties.css";
 
 const Specialties = (props) => {
-  console.log(props);
+  console.log(props.currentSpecialty);
   const specialtiesList = props.specialties.map((specialty, index) => {
     return (
       <a href='#' key={index}>

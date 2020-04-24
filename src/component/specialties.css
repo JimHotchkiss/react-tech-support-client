@@ -1,6 +1,19 @@
+.specialty-component-div {
+  display: flex;
+}
+
 .specialty-list-div {
   display: flex;
   flex-wrap: wrap;
+}
+
+.specialty-title-div p {
+  font-family: Roboto;
+  font-size: 14px;
+  color: #414141;
+  font-weight: 600;
+  margin-right: 14px;
+  padding-top: 8px;
 }
 
 .specialty-list-div a {
@@ -9,17 +22,27 @@
 
 /* button */
 .specialty {
-  min-height: 25px;
-  min-width: 50px;
+  min-height: 22px;
+  min-width: 55px;
   margin-top: 5px;
   margin-left: 8px;
-  padding-top: 6px;
+  padding-top: 5px;
   padding-bottom: 4px;
   padding-left: 10px;
   padding-right: 10px;
   background: #f1f1f1 0% 0% no-repeat padding-box;
   border-radius: 50px;
   opacity: 1;
+}
+
+.specialty:hover {
+  background: #2b72cc 0% 0% no-repeat padding-box;
+  transition: all 0.3s ease-out;
+}
+
+.specialty p:hover {
+  color: #fff;
+  transition: all 0.3s ease-out;
 }
 
 .specialty.clicked {
@@ -30,15 +53,11 @@
 .specialty p {
   font-family: Roboto;
   font-size: 11px;
+  font-weight: 300;
   text-align: center;
   letter-spacing: 0px;
   color: #b2b4ae;
   opacity: 1;
-}
-
-.specialty p:hover {
-  color: #2b72cc;
-  transition: all 0.3s ease-out;
 }
 
 .specialty.clicked p {
