@@ -1,0 +1,47 @@
+.specialty-list-div {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.specialty-list-div a {
+  text-decoration: none;
+}
+
+/* button */
+.specialty {
+  height: 23px;
+  min-width: 50px;
+
+  margin-top: 5px;
+  margin-left: 8px;
+  padding-top: 5px;
+  padding-left: 10px;
+  padding-right: 10px;
+  background: #f1f1f1 0% 0% no-repeat padding-box;
+  border-radius: 50px;
+  opacity: 1;
+}
+
+.specialty.clicked {
+  background: #2b72cc 0% 0% no-repeat padding-box;
+  transition: all 0.3s ease-out;
+}
+
+.specialty p {
+  font-family: Roboto;
+  font-size: 11px;
+  text-align: center;
+  letter-spacing: 0px;
+  color: #b2b4ae;
+  opacity: 1;
+}
+
+.specialty p:hover {
+  color: #2b72cc;
+  transition: all 0.3s ease-out;
+}
+
+.specialty.clicked p {
+  color: #ffffff;
+  transition: all 0.3s ease-out;
+}
