@@ -5,7 +5,7 @@ const ConsoleCategory = () => {
   return (
     <div className='console-category-div'>
       <h1>CCU</h1>
-      <a href='#'>
+      <a href='#!'>
         <div className='menu-icon-div'></div>
       </a>
     </div>
