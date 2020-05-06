@@ -3,7 +3,7 @@ import "./arrow.css";
 
 const Arrow = (props) => {
   return (
-    <a href='#'>
+    <a href='#!'>
       <div
         className={"arrow-outer-div " + (props.camera.clicked ? "open" : "")}>
         <div className='arrow-div'></div>
